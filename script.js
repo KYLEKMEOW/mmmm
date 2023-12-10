@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Функция для форматирования чисел
 // Функция для форматирования чисел
 function formatNumber(number) {
-    if (number >= 30000000) return 'max'; // Добавлено условие для предела в 20 миллионов
+    if (number >= 40000000) return 'max'; // Добавлено условие для предела в 20 миллионов
     if (number >= 1e6) return (number / 1e6).toFixed(2) + 'm';
     if (number >= 1e3) return (number / 1e3).toFixed(2) + 'k';
     return number.toString();
