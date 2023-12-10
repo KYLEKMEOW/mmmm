@@ -1,0 +1,222 @@
+body {
+    font-family: 'Iskra', sans-serif;
+    background: linear-gradient(to right, #49c3a2, #cbf05a);
+    margin: 99;
+    padding: 0;
+}
+
+header {
+    background-color: linear-gradient(to right, #49c3a2, #cbf05a);
+    padding: 1px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-column {
+    flex: 2;
+}
+
+.side-column {
+    flex: 1; 
+}
+
+.rating-container {
+    background: linear-gradient(to right, #72c1fd, #f9cdff);
+    border: 5px solid #490453;
+    border-radius: 5px;
+    padding: 15px; 
+    margin-top: 15px;
+}
+
+#player-rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #FFFF;
+}
+
+.player-name {
+    flex: 2;
+}
+
+.player-score {
+    font-weight: bold;
+}
+
+.notification {
+    background-color: linear-gradient(to right, #f5e1ba, #add8e6);
+    border: 2px solid #0000cd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.news-card {
+    background-color: #add8e6;
+    border: 1px solid #0000cd;
+    border-radius: 5px;
+    padding: 10px;   
+    margin-bottom: 20px;
+}
+.error-card {
+    background-color: #ff0000;
+    border: 3px solid #9a0909;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.buy-card {
+    background: linear-gradient(to right, #540099, #000000);
+	color: white;
+    border: 3px solid #0000cd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+/* Стили для карточек товаров */
+.leage-card,
+.eve-card,
+.product-card,
+.special-offer {
+    width: 300px;
+    background: linear-gradient(to right, #fb34f4, #5cc4f5); /* Градиентный фон */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Стили для изображений внутри карточек */
+.product-card img,
+.special-offer img {
+    max-width: 50%; /* Устанавливаем максимальную ширину изображения в 100% от родительского контейнера */
+    height: auto;    /* Автоматическое изменение высоты для сохранения пропорций */
+}
+
+.eve-card {
+    background: linear-gradient(to right, #208c20, #080908); /* Градиентный фон */
+    color: white;
+}
+.leage-card {
+    background: linear-gradient(to right, #a1a9ee, #000018); /* Градиентный фон */
+    color: white;
+	border: 3px solid #0000cd;
+}
+
+/* Стили для кнопок */
+.buy-button {
+    background-color: #b82fe0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Стили для специального предложения */
+
+
+.special-offer {
+    background: linear-gradient(to right, #540099, #000000); /* Градиентный фон */
+    color: white;
+}
+
+/* Стили для таймера */
+.timer {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.go-to-page-button {
+    background-color: #540099;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.event-button {
+    background: linear-gradient(to right, #2c8598, #8b96ff);
+    color: white;
+    padding: 10px 20px;
+    border: 2px linear-gradient(to right, #330000, #004d00);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.leage-button {
+    background: linear-gradient(to right, #125ebb, #74eaf5);
+    color: white;
+    padding: 10px 20px;
+    border: 2px linear-gradient(to right, #330000, #004d00);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#progress-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#progress-bar-container {
+  width: 300px;
+  height: 20px;
+  background-color: #818181;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #125ebb, #74eaf5);
+  width: 0;
+  border-radius: 15px;
+}
+
+#info-text {
+  text-align: center;
+}
+
+
+
+
+
+
+#topPlayers {
+    background: linear-gradient(to right, #2c8598, #8b96ff);
+	color: white;
+    border: 3px solid #101b7e;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#topPlayers h2 {
+    color: white;
+}
+
+#topPlayers p {
+    margin: 20px 0;
+    font-size: 28px;
+    color: #FFFF;
+}
