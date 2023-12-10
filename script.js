@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 27777777 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 19884777 },
-        { name: '👗🪙👑🧑‍💻💘❄️Hola COLA', score: 11049999 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 20499881 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 17888111 },
+        { name: '️👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 35000199 },
+        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 24656551 },
+        { name: '👗🪙👑🧑‍💻💘❄️Hola COLA', score: 17661552 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 29881777 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 21000491 },
 		{ name: '👗🪙✒️ⓂAmnistaria', score: 9999999 },
         // Добавьте своих игроков, при необходимости
     ];
@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 500000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 1000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;

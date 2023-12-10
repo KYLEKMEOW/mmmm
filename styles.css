@@ -152,7 +152,7 @@ header {
 }
 
 .event-button {
-    background: linear-gradient(to right, #2c8598, #8b96ff);
+    background: linear-gradient(to right, #ba0f0f, #5d9fd6);
     color: white;
     padding: 10px 20px;
     border: 2px linear-gradient(to right, #330000, #004d00);
@@ -203,9 +203,9 @@ header {
 
 
 #topPlayers {
-    background: linear-gradient(to right, #2c8598, #8b96ff);
+    background: linear-gradient(to right, #ba0f0f, #5d9fd6);
 	color: white;
-    border: 3px solid #101b7e;
+    border: 3px solid #0b4c82;
     border-radius: 6px;
     padding: 10px;
     margin-bottom: 20px;
