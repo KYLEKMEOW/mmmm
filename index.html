@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="stylesheet" href="styles.css">
+     <link rel="icon" href="img/z.png" type="image/x-icon">
+    <title>MEOW</title>
+</head>
+
+<body>
+    <header>
+        <h1>MEOW - ПЕРЕРОЖДЕНИЕ</h1>
+        <h4>v9.7.0</h4>
+
+            <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
+
+</div>
+<body>
+
+<p>На сайте сейчас: <span id="onlineUsers"></span></p>
+
+<script>
+    function updateOnlineUsers() {
+        // Задайте диапазон для имитации посещаемости
+        var minUsers = 18374;
+        var maxUsers = 94881;
+
+        // Генерация случайного числа в заданном диапазоне
+        var randomUsers = Math.floor(Math.random() * (maxUsers - minUsers + 1)) + minUsers;
+
+        // Выводим количество пользователей на странице
+        document.getElementById('onlineUsers').textContent = randomUsers;
+    }
+
+    // Обновляем количество пользователей каждые 5 секунд
+    setInterval(updateOnlineUsers, 11000);
+
+    // Вызываем функцию при загрузке страницы
+    updateOnlineUsers();
+</script>
+
+</body>
+    </header>
+
+    <div class="content">
+        <div class="main-column">
+            <div class="rating-container">
+                <h2>Рейтинг игроков</h2>
+                <div id="player-rating"></div>
+            </div>
+        </div>
+
+
+
+   <div class="side-column">
+            <div class="notification" id="notification">
+                <h3>Обновление!</h3>
+                <p>Теперь в лиге пишется 1m</p>
+            </div>
+       <!--     <div class="error-card">
+                <h2>Взлом рейтинга.</h2>
+                <p>Из-за взлома ТОПа по комфорту нам пришлось ввести ограничения по рейтингу в виде макисмального предела комфорта, ведь так мы сможем обезопасить себя от будущих проблем. Сейчас мы решаем проблему с читером, подымем предел, чтобы было видно сколько точно комфорта у лучшего игрока.</p>
+                <button class="event-button">Забрать</button>  
+            </div>  -->
+
+          <!--      <div class="leage-card">
+                <h2>Вау!</h2>
+                <p>Принимай награду за лигу, но не забывай, что награда сгорит, если вы не забрали и перешли на следующую лигу!</p>
+            <button class="leage-button">Забрать</button>
+            </div> -->
+             <div class="leage-card">
+                <h2>Блог гейм-дизайнера:</h2>
+                <p>Ивент отменился, у нас в команде начались разногласия и я приняла решение остановить ивент, выдала вам всем титулы, чтобы не расстраивались, остальных призов не будет, извините меня(</p>
+       
+        </div>
+            <div class="news-card">
+                <h2>Это что!?</h2>
+                <p>А это новый анонс!</p>
+            <button class="event-button">Смотреть</button>
+            </div>
+             <div class="buy-card">
+                <h2>Специальное предложение</h2>
+                <p>Рубиновое дерево + 500 + 350 золота за 9999 рублей!</p>
+                <div id="special-offer-timer">00:00:00</div>
+        <button class="buy-button" onclick="buySpecialOffer('Специальное предложение', 500, 325, 9999)">Купить</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Кнопка для перехода на другую страницу -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="topPlayers"></div>
+
+    <script>
+        function formatCurrency(amount) {
+            if (amount >= 1000000) {
+                return (amount / 1000000).toFixed(2) + "m";
+            } else if (amount >= 1000) {
+                return (amount / 1000).toFixed(2) + "k";
+            } else {
+                return amount.toString();
+            }
+        }
+
+        const players = [
+            { name: "👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", eventCurrency: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", eventCurrency: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️Hola COLA", eventCurrency: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", eventCurrency: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️Pell", eventCurrency: 0 },
+            { name: "👗🪙✒️ⓂAmnistaria", eventCurrency: 0 },
+        ];
+        const topPlayers = players
+            .sort((a, b) => b.eventCurrency - a.eventCurrency)
+            .slice(0, 6);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const topPlayersContainer = document.getElementById("topPlayers");
+            topPlayersContainer.innerHTML = "<h2>ТОП-6 игроков в ивенте:</h2>";
+
+            topPlayers.forEach((player, index) => {
+                topPlayersContainer.innerHTML += `<p>${index + 1}. ${player.name} - ${formatCurrency(player.eventCurrency)}</p>`;
+            });
+        });
+    </script>
+                 <div class="buy-card">
+                <h2>Мир ткани</h2>
+                <p>Добро пожаловать в кутюрье, только в этом ивенте вы сможете заработать крутые призы! <br>Чтож, пройдемся по условиям!<br>-------------------------------------<br>- Жми на кнопку, вы сможете заработать ткань в определенном диапазоне, чем больше такани - тем больше ты сможешь ее зарабатывать!<br>-------------------------------------<br>А теперь о сладком... О ПРИЗАХ!<br>-------------------------------------<br>1 место: 56.560 рублей + 100.000 золотых монет на счёт<br>2 место: 25 000 рублей + 56.560 золотых монет на ваш счёт<br>3 место: 5 000 рублей + 5656 золотых монет на ваш счёт<br>Кстати, за 900 000 000 ткани вы получите титул: 👗</p>
+
+         <button class="event-button">Поучить ткань (500 - 1 000)</button>
+          <button class="event-button">Поучить ткань (1500 - 5 000)</button>
+           <button class="event-button">Поучить ткань (7777 - 20 000)</button>
+            <button class="event-button">Поучить ткань (50 000 - 150 000) [НЕДОСТУПНО]</button>
+            </div>
+</body>
+
+
+
+
+
+
+<div class="leage-card">
+ <body>
+
+  <div id="progress-info">
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="info-text">
+      <p><strong>Активность:</strong> <span id="activity-points">0</span></p>
+      <p><strong>Лига:</strong> <span id="current-league">Новичок</span></p>
+      <p><strong>Награда:</strong> <span id="reward-info">Награда за достижение "Новичок"</span></p> 
+      <p><strong>Для перехода на следующую лигу:</strong> <span id="next-league">999999999999999</span></p> 
+      <button class="leage-button">Забрать награду за лигу</button>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
