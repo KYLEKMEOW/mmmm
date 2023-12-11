@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 1000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 3000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -217,3 +217,13 @@ window.onload = function () {
   updateLeagueAndRewards(currentPoints);
 };
 
+// Ваш код для проверки наличия обновлений
+const hasUpdate = checkForUpdate();
+
+if (hasUpdate) {
+    // Вывести сообщение пользователю
+    alert("На сайте доступно обновление. Страница будет перезагружена.");
+
+    // Перезагрузить страницу
+    location.reload(true);
+}
