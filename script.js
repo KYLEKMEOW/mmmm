@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Функция для форматирования чисел
 // Функция для форматирования чисел
 function formatNumber(number) {
-    if (number >= 40000000) return 'max'; // Добавлено условие для предела в 20 миллионов
+    if (number >= 70000000) return '70000000'; // Добавлено условие для предела в 20 миллионов
     if (number >= 1e6) return (number / 1e6).toFixed(2) + 'm';
     if (number >= 1e3) return (number / 1e3).toFixed(2) + 'k';
     return number.toString();
@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 6000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 10000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -133,8 +133,8 @@ function updateLeagueAndRewards(activityPoints2) {
   
   
     if(activityPoints2 >= 40000000) {
-    league = 'Название лиги заблокированно';
-    rewardInfo = 'х77 777 золота + х10 MeowPaka Ангел';
+    league = 'Наблюдатель';
+    rewardInfo = 'х11.000 золота + х10 MeowPaka Ангел';
     nextLeague = 'В данный момент это макисмальная лига.';	
   } else if(activityPoints2 >= 35000000) {
     league = 'Житель';
@@ -208,7 +208,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(1948); // Имитация добавления 1000 баллов
+  addPointsAndRefreshSystem(9103); // Имитация добавления 1000 баллов
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы

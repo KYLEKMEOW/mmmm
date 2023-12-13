@@ -1,12 +1,12 @@
 body {
     font-family: 'Iskra', sans-serif;
-    background: linear-gradient(to right, #49c3a2, #cbf05a);
+    background: linear-gradient(to right, #104a7b, #92cafa);
     margin: 99;
     padding: 0;
 }
 
 header {
-    background-color: linear-gradient(to right, #49c3a2, #cbf05a);
+    background-color: linear-gradient(to right, #104a7b, #92cafa);
     padding: 1px;
     text-align: center;
 }
