@@ -68,10 +68,17 @@ header {
     border-radius: 5px;
     padding: 10px;   
     margin-bottom: 20px;
-}
+} 
 .error-card {
     background-color: #ff0000;
     border: 3px solid #9a0909;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.boost-card {
+    background: linear-gradient(to right, #bca01e, #fff690);
+    border: 3px solid #7b5a10;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
