@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 10000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 15000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -208,7 +208,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(9103); // Имитация добавления 1000 баллов
+  addPointsAndRefreshSystem(4511); // Имитация добавления 1000 баллов
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
