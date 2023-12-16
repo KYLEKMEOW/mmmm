@@ -227,3 +227,34 @@ header {
     font-size: 28px;
     color: #FFFF;
 }
+
+
+#club-container {
+	background: linear-gradient(to right, #ba0f0f, #5d9fd6);
+	border: 5px solid #0b4c82;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#club-list {
+    border: 2px solid #0b4c82;
+    padding: 10px;
+}
+
+.club {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #0b4c82;
+}
+
+.club h3 {
+    margin: 5px 0;
+}
+
+.club-level {
+    font-weight: bold;
+    color: #3498db;
+}

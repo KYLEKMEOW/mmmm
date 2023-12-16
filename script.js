@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 51994888 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 47666111 },
-        { name: '👗🪙👑🧑‍💻💘❄️Hola COLA', score: 36666666 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 41999811 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 34000222 },
+        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 69188221 },
+        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 53991888 },
+        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 49881772 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 51000299 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 40001999 },
 		{ name: '👗🪙✒️ⓂAmnistaria', score: 9999999 },
         // Добавьте своих игроков, при необходимости
     ];
@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 15000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 25000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -208,7 +208,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(4511); // Имитация добавления 1000 баллов
+  addPointsAndRefreshSystem(9022); // Имитация добавления 1000 баллов
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
@@ -217,13 +217,109 @@ window.onload = function () {
   updateLeagueAndRewards(currentPoints);
 };
 
-// Ваш код для проверки наличия обновлений
-const hasUpdate = checkForUpdate();
 
-if (hasUpdate) {
-    // Вывести сообщение пользователю
-    alert("На сайте доступно обновление. Страница будет перезагружена.");
+// Пример данных (замените на свои данные)
+const clubs = [
+    {
+        name: "[KM] KYLKI",
+        players: [
+            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 0 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 0 },
+            // Добавьте дополнительных игроков при необходимости
+        ],
+    },
+    {
+        name: "[Dev]OnlyForDevelopers",
+        players: [
+            { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
+            { name: "Developer", contribution: 0 },
+			{ name: "gg", contribution: 0 },
+			{ name: "Код моя жизнь", contribution: 0 },
+            // Добавьте дополнительных игроков при необходимости
+        ],
+    },
+	    {
+        name: "[Куку]Кукусики",
+        players: [
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 0 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 0 },
+            // Добавьте дополнительных игроков при необходимости
+        ],
+    },
+    // Добавьте дополнительные клубы при необходимости
+];
 
-    // Перезагрузить страницу
-    location.reload(true);
+// Функция для форматирования чисел в стиле "1k" и "1m"
+function formatNumber(number) {
+    if (number >= 1e6) {
+        return (number / 1e6).toFixed(1) + "m";
+    } else if (number >= 1e3) {
+        return (number / 1e3).toFixed(1) + "k";
+    } else {
+        return number.toString();
+    }
 }
+
+// Функция для отображения клубов на странице
+function renderClubs() {
+    const clubList = document.getElementById("club-list");
+    clubList.innerHTML = "";
+
+    // Сортировка клубов по уровню и вкладу
+    clubs.sort((a, b) => {
+        const aLevel = getClubLevel(a.players.reduce((total, player) => total + player.contribution, 0));
+        const bLevel = getClubLevel(b.players.reduce((total, player) => total + player.contribution, 0));
+
+        // Сначала сортируем по уровню
+        if (aLevel !== bLevel) {
+            return bLevel - aLevel;
+        }
+
+        // Затем по вкладу в случае равенства уровней
+        const aContribution = a.players.reduce((total, player) => total + player.contribution, 0);
+        const bContribution = b.players.reduce((total, player) => total + player.contribution, 0);
+        return bContribution - aContribution;
+    });
+
+    clubs.forEach((club) => {
+        const clubElement = document.createElement("div");
+        clubElement.classList.add("club");
+
+        // Вычисление общего вклада игроков
+        const totalContribution = club.players.reduce(
+            (total, player) => total + player.contribution,
+            0
+        );
+
+        const level = getClubLevel(totalContribution);
+
+        clubElement.innerHTML = `
+            <h3>${club.name}</h3>
+            <p>Вложенное золото: ${formatNumber(totalContribution)}</p>
+            <p class="club-level">Уровень: ${level}</p>
+            <p>Участники клуба:</p>
+            <ul>
+                ${club.players.map((player) => `<li>${player.name}: ${formatNumber(player.contribution)}</li>`).join("")}
+            </ul>
+        `;
+
+        clubList.appendChild(clubElement);
+    });
+}
+
+// Функция для определения уровня клуба
+function getClubLevel(gold) {
+    if (gold >= 0 && gold <= 5000) {
+        return 1;
+    } else if (gold >= 5001 && gold <= 35000) {
+        return 2;
+    } else if (gold >= 35001 && gold <= 55000) {
+        return 3;
+    } else {
+        return 4; // Больше 55000, добавьте дополнительные условия при необходимости
+    }
+}
+
+// Вызов функции для отображения клубов при загрузке страницы
+window.onload = renderClubs;
