@@ -230,28 +230,31 @@ header {
 
 
 #club-container {
-	background: linear-gradient(to right, #ba0f0f, #5d9fd6);
-	border: 5px solid #0b4c82;
+	background: linear-gradient(to right, #ffe5b4, #9bc0c5);
+	border: 5px solid #8f7f61;
     border-radius: 6px;
     padding: 10px;
     max-width: 600px;
     margin: 20px auto;
     text-align: center;
+	color: white;
 }
 
 #club-list {
-    border: 2px solid #0b4c82;
+    border: 2px solid #8f7f61;
     padding: 10px;
+	color: white;
 }
 
 .club {
     margin-bottom: 10px;
     padding: 5px;
-    border-bottom: 1px solid #0b4c82;
+    border-bottom: 1px solid #8f7f61;
 }
 
-.club h3 {
+.club h1 {
     margin: 5px 0;
+	
 }
 
 .club-level {

@@ -223,27 +223,27 @@ const clubs = [
     {
         name: "[KM] KYLKI",
         players: [
-            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 0 },
-            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 0 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 35000 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12000 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
     {
         name: "[Dev]OnlyForDevelopers",
         players: [
-            { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
-            { name: "Developer", contribution: 0 },
-			{ name: "gg", contribution: 0 },
-			{ name: "Код моя жизнь", contribution: 0 },
+            { name: "👗🪙✒️ⓂAmnistaria", contribution: 55 },
+            { name: "Developer", contribution: 55 },
+			{ name: "gg", contribution: 55 },
+			{ name: "Код моя жизнь", contribution: 555 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
 	    {
         name: "[Куку]Кукусики",
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 0 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 0 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 9011 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 12000 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 14000 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -316,8 +316,10 @@ function getClubLevel(gold) {
         return 2;
     } else if (gold >= 35001 && gold <= 55000) {
         return 3;
-    } else {
+    } else if (gold >= 55001 && gold <= 100000) {
         return 4; // Больше 55000, добавьте дополнительные условия при необходимости
+	} else {
+        return 5;
     }
 }
 
