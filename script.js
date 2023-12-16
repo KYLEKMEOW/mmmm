@@ -208,7 +208,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(9022); // Имитация добавления 1000 баллов
+  addPointsAndRefreshSystem(18044); // Имитация добавления 1000 баллов
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
