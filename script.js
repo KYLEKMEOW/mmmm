@@ -134,15 +134,15 @@ function updateLeagueAndRewards(activityPoints2) {
   
     if(activityPoints2 >= 40000000) {
     league = 'Наблюдатель';
-    rewardInfo = 'х11.000 золота + х10 MeowPaka Ангел';
+    rewardInfo = 'х900 золота + х10 MeowPaka Ангел';
     nextLeague = 'В данный момент это макисмальная лига.';	
   } else if(activityPoints2 >= 35000000) {
     league = 'Житель';
-    rewardInfo = 'х11.111 Золота';  
+    rewardInfo = 'х550 Золота';  
 	nextLeague = '40 000 000';
   } else if(activityPoints2 >= 25000000) {
     league = 'Король мета-вселеной';
-    rewardInfo = 'х999 золота'; 
+    rewardInfo = 'х300 золота'; 
 	nextLeague = '35 000 000';
   } else if(activityPoints2 >= 20000000) {
     league = 'Король галактики';
@@ -150,11 +150,11 @@ function updateLeagueAndRewards(activityPoints2) {
 	nextLeague = '25 000 000';
   } else if(activityPoints2 >= 15000000) {
     league = 'Королей вселеной';
-    rewardInfo = 'х19.000 золота!';
+    rewardInfo = 'х100 золота!';
 	nextLeague = '20 000 000';
   } else if(activityPoints2 >= 10000000) {
     league = 'Королей мира';
-    rewardInfo = 'х9000 золота + х5 MeowPaka "Повар", х5 MeowPaka "Злыдень", х5 MeowPaka "Шутник" ';
+    rewardInfo = 'х50 золота + х5 MeowPaka "Повар", х5 MeowPaka "Злыдень", х5 MeowPaka "Шутник" ';
 	nextLeague = '15 000 000';
   } else if(activityPoints2 >= 7000000) {
     league = 'Легендарных КОРОЛЕЙ';
@@ -162,7 +162,7 @@ function updateLeagueAndRewards(activityPoints2) {
 	nextLeague = '10 000 000';
   } else if(activityPoints2 >= 6000000) {
     league = 'Королей';
-    rewardInfo = 'х12 000 золота';
+    rewardInfo = 'х100 золота';
 	nextLeague = '7 000 000';
   } else if(activityPoints2 >= 3000000) {
     league = 'Смешных Легенд';
@@ -170,7 +170,7 @@ function updateLeagueAndRewards(activityPoints2) {
 	nextLeague = '6 000 000';
   } else if(activityPoints2 >= 1500000) {
     league = 'Сильных Легенд';
-    rewardInfo = 'х500 золота';
+    rewardInfo = 'х10 золота';
 	nextLeague = '3 000 000';
   } else if (activityPoints2 >= 1000000) {
     league = 'Легенд';
@@ -223,16 +223,16 @@ const clubs = [
     {
         name: "[KM] KYLKI",
         players: [
-            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 79000 },
-            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 67911 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 12000 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 13041 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
     {
         name: "[Dev]OnlyForDevelopers",
         players: [
-            { name: "👗🪙✒️ⓂAmnistaria", contribution: 5555 },
-            { name: "Developer", contribution: 5555 },
+            { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
+            { name: "Developer", contribution: 0 },
 			{ name: "gg", contribution: 5555 },
 			{ name: "Код моя жизнь", contribution: 5555 },
             // Добавьте дополнительных игроков при необходимости
@@ -241,9 +241,9 @@ const clubs = [
 	    {
         name: "[Куку]Кукусики",
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 50000 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 35000 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 60000 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 11021 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 12094 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 8711 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -318,9 +318,14 @@ function getClubLevel(gold) {
         return 3;
     } else if (gold >= 55001 && gold <= 100000) {
         return 4; // Больше 55000, добавьте дополнительные условия при необходимости
-	} else {
+	} else if (gold >= 100001 && gold <= 200000) {
         return 5;
+	} else if (gold >= 200001 && gold <= 350000) {
+        return 6;
+	} else {
+        return 7;
     }
+
 }
 
 // Вызов функции для отображения клубов при загрузке страницы
