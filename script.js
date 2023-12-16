@@ -67,7 +67,7 @@ function buySpecialOffer(offerName, gold1, gold2, price) {
 
 function startSpecialOfferTimer() {
     const timerElement = document.getElementById('special-offer-timer');
-    const endDate = new Date('2023-12-11T23:59:59'); // Установите вашу конечную дату
+    const endDate = new Date('2023-12-17T23:59:59'); // Установите вашу конечную дату
 
     function updateTimer() {
         const now = new Date();
@@ -223,27 +223,27 @@ const clubs = [
     {
         name: "[KM] KYLKI",
         players: [
-            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 35000 },
-            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12000 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 79000 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 67911 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
     {
         name: "[Dev]OnlyForDevelopers",
         players: [
-            { name: "👗🪙✒️ⓂAmnistaria", contribution: 55 },
-            { name: "Developer", contribution: 55 },
-			{ name: "gg", contribution: 55 },
-			{ name: "Код моя жизнь", contribution: 555 },
+            { name: "👗🪙✒️ⓂAmnistaria", contribution: 5555 },
+            { name: "Developer", contribution: 5555 },
+			{ name: "gg", contribution: 5555 },
+			{ name: "Код моя жизнь", contribution: 5555 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
 	    {
         name: "[Куку]Кукусики",
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 9011 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 12000 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 14000 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 50000 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 35000 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 60000 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
