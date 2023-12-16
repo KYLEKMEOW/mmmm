@@ -47,7 +47,7 @@
         <div class="main-column">
             <div class="rating-container">
                 <h2>Рейтинг игроков</h2>
-                <div id="player-rating"></div>
+                <div id="pl1ayer-rating"></div>
             </div>
         </div>
 
@@ -63,11 +63,11 @@
                 <h2>АКТУАЛЬНЫЕ БУСТЫ:</h2>
                 <p>🤸х2 Активность🤸</p>  
             </div>
-       <!--     <div class="error-card">
-                <h2>Взлом рейтинга.</h2>
-                <p>Из-за взлома ТОПа по комфорту нам пришлось ввести ограничения по рейтингу в виде макисмального предела комфорта, ведь так мы сможем обезопасить себя от будущих проблем. Сейчас мы решаем проблему с читером, подымем предел, чтобы было видно сколько точно комфорта у лучшего игрока.</p>
+            <div class="error-card">
+                <h2>ВНИМАНИЕ!</h2>
+                <p>До выхода обновления рейтинги и лига отключены, примите 77 золота в качестве компенсации!</p>
                 <button class="event-button">Забрать</button>  
-            </div>  -->
+            </div> 
 
           <!--      <div class="leage-card">
                 <h2>Вау!</h2>
@@ -96,7 +96,7 @@
 
 <div id="club-container">
     <h1>ТОП клубов</h1>
-    <div id="club-list"></div>
+    <div id="clu1b-list"></div>
 </div>
                  <div class="buy-card">
                 <h2>Клубные уровни:</h2>
@@ -154,7 +154,7 @@
         ];
         const topPlayers = players
             .sort((a, b) => b.eventCurrency - a.eventCurrency)
-            .slice(0, 3);
+            .slice(0, 0);
 
         document.addEventListener("DOMContentLoaded", function() {
             const topPlayersContainer = document.getElementById("topPlayers");
@@ -206,7 +206,7 @@
         ];
         const topGame = players
             .sort((a, b) => b.Game - a.Game)
-            .slice(0, 3);
+            .slice(0, 0);
 
         document.addEventListener("DOMContentLoaded", function() {
             const topGameContainer = document.getElementById("topGame");
@@ -225,8 +225,8 @@
  <body>
 
   <div id="progress-info">
-    <div id="progress-bar-container">
-      <div id="progress-bar"></div>
+    <div id="progress-bar-co0ntainer">
+      <div id="progress-b0ar"></div>
     </div>
     <div id="info-text">
       <p><strong>Активность:</strong> <span id="activity-points">0</span></p>
