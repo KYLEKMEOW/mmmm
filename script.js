@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 69188221 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 53991888 },
-        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 49881772 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 51000299 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 40001999 },
-		{ name: '👗🪙✒️ⓂAmnistaria', score: 9999999 },
+        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 74001999 },
+        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 69444881 },
+        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 59122881 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 70299888 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 55988112 },
+		{ name: '👗🪙✒️ⓂAmnistaria', score: 19999999 },
         // Добавьте своих игроков, при необходимости
     ];
 
@@ -104,7 +104,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 25000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 35000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -222,6 +222,8 @@ window.onload = function () {
 const clubs = [
     {
         name: "[KM] KYLKI",
+		avatar: "img/s.png",
+		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
             { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 12000 },
             { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 13041 },
@@ -230,6 +232,8 @@ const clubs = [
     },
     {
         name: "[Dev]OnlyForDevelopers",
+		avatar: "img/z.png",
+		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
             { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
             { name: "Developer", contribution: 0 },
@@ -240,6 +244,8 @@ const clubs = [
     },
 	    {
         name: "[Куку]Кукусики",
+		avatar: "img/спецп.png",
+		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
             { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 11021 },
             { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 12094 },
@@ -294,8 +300,14 @@ function renderClubs() {
 
         const level = getClubLevel(totalContribution);
 
+        // Добавление рамки клубу
+        if (club.border) {
+            clubElement.classList.add(club.border);
+        }
+
         clubElement.innerHTML = `
             <h3>${club.name}</h3>
+            <img src="${club.avatar}" alt="Club Avatar" class="club-avatar">
             <p>Вложенное золото: ${formatNumber(totalContribution)}</p>
             <p class="club-level">Уровень: ${level}</p>
             <p>Участники клуба:</p>
