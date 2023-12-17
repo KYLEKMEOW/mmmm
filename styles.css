@@ -1,12 +1,12 @@
 body {
     font-family: 'Iskra', sans-serif;
-    background: linear-gradient(to right, #104a7b, #92cafa);
+    background: linear-gradient(to right, #45b2e8, #07048b);
     margin: 99;
     padding: 0;
 }
 
 header {
-    background-color: linear-gradient(to right, #104a7b, #92cafa);
+    background-color: linear-gradient(to right, #45b2e8, #07048b);
     padding: 1px;
     text-align: center;
 }
@@ -60,6 +60,7 @@ header {
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
+	color: white;
 }
 
 .news-card {
@@ -106,9 +107,10 @@ header {
 }
 
 /* Стили для изображений внутри карточек */
+.leage-card img,
 .product-card img,
 .special-offer img {
-    max-width: 50%; /* Устанавливаем максимальную ширину изображения в 100% от родительского контейнера */
+    max-width: 30%; /* Устанавливаем максимальную ширину изображения в 100% от родительского контейнера */
     height: auto;    /* Автоматическое изменение высоты для сохранения пропорций */
 }
 
@@ -270,4 +272,7 @@ header {
 
 .golden-border {
     border: 3px solid gold;
+}
+.admin-border {
+    border: 3px solid red;
 }

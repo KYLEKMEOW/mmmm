@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 74001999 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 69444881 },
-        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 59122881 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 70299888 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 55988112 },
-		{ name: '👗🪙✒️ⓂAmnistaria', score: 19999999 },
+        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 78001999 },
+        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 74001992 },
+        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 70012221 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 76991882 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 68001992 },
+		{ name: 'GameOON!', score: 12001993 },
+		{ name: '👗🪙✒️ⓂAmnistaria', score: 500000 },
         // Добавьте своих игроков, при необходимости
     ];
 
@@ -104,7 +105,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 35000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 40000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -225,15 +226,17 @@ const clubs = [
 		avatar: "img/s.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 12000 },
-            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 13041 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 100000 },
+            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 45991 },
+			{ name: "GameOON", contribution: 1000 },
+			{ name: "Начисление от администрации", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
     {
         name: "[Dev]OnlyForDevelopers",
 		avatar: "img/z.png",
-		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
+		border: "admin-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
             { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
             { name: "Developer", contribution: 0 },
@@ -247,9 +250,10 @@ const clubs = [
 		avatar: "img/спецп.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 11021 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 12094 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 8711 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 31001 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 20100 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 50000 },
+			{ name: "Начисление от администрации", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -324,15 +328,15 @@ function renderClubs() {
 function getClubLevel(gold) {
     if (gold >= 0 && gold <= 5000) {
         return 1;
-    } else if (gold >= 5001 && gold <= 35000) {
+    } else if (gold >= 5001 && gold <= 25000) {
         return 2;
-    } else if (gold >= 35001 && gold <= 55000) {
+    } else if (gold >= 25001 && gold <= 45000) {
         return 3;
-    } else if (gold >= 55001 && gold <= 100000) {
+    } else if (gold >= 45001 && gold <= 60000) {
         return 4; // Больше 55000, добавьте дополнительные условия при необходимости
-	} else if (gold >= 100001 && gold <= 200000) {
+	} else if (gold >= 60001 && gold <= 90000) {
         return 5;
-	} else if (gold >= 200001 && gold <= 350000) {
+	} else if (gold >= 90001 && gold <= 150000) {
         return 6;
 	} else {
         return 7;
