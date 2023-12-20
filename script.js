@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Функция для форматирования чисел
 // Функция для форматирования чисел
 function formatNumber(number) {
-    if (number >= 70000000) return '70000000'; // Добавлено условие для предела в 20 миллионов
+    if (number >= 90000000) return '90000000'; // Добавлено условие для предела в 20 миллионов
     if (number >= 1e6) return (number / 1e6).toFixed(2) + 'm';
     if (number >= 1e3) return (number / 1e3).toFixed(2) + 'k';
     return number.toString();
@@ -105,7 +105,7 @@ function goToHomePage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 77777777) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 111111111) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -219,7 +219,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(36088); // Имитация добавления 1000 баллов
+  addPointsAndRefreshSystem(18044); // Имитация добавления 1000 баллов //х2 36088 х1 18044
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
@@ -238,7 +238,7 @@ const clubs = [
         players: [
             { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 100000 },
             { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 45991 },
-			{ name: "GameOON", contribution: 1000 },
+			{ name: "GameOON", contribution: 34000 },
 			{ name: "Начисление от администрации", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
@@ -260,8 +260,8 @@ const clubs = [
 		avatar: "img/спецп.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 31001 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 20100 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 65011 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 43133 },
 			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 50000 },
 			{ name: "Начисление от администрации", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
