@@ -1,8 +1,8 @@
 function formatNumber(number) {
   if (number >= 1000000) {
-    return (number / 1000000).toFixed(1) + 'm';
+    return (number / 1000000).toFixed(2) + 'm';
   } else if (number >= 1000) {
-    return (number / 1000).toFixed(1) + 'k';
+    return (number / 1000).toFixed(2) + 'k';
   } else {
     return number;
   }
@@ -38,11 +38,11 @@ function updateRankings(players) {
 function simulateRuneIncrement(players) {
   setInterval(() => {
     players.forEach(player => {
-      player.runes += Math.floor(Math.random() * (12941 - 1102 + 1)) + 928;
+      player.runes += Math.floor(Math.random() * (16001 - 3091 + 1)) + 2021;
     });
 
     updateRankings(players);
-  }, 9000);
+  }, 12000);
 }
 
 // Загрузка данных из localStorage при загрузке страницы
