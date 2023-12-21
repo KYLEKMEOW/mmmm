@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <link rel="icon" href="img/лого.png" type="image/x-icon">
+    <title>Итоги года</title>
+</head>
+
+<body>
+    <header>
+        <h1>MEOW - Время пришло</h1>
+        <h4>v13.0.3</h4>
+            <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
+            <button class="go-to-page-button" onclick="goToHomePage()">Вернуться обратно</button>
+
+   <div class="side-column">
+            <div class="notification" id="notification">
+                <h3>Спасибо вам!</h3>
+                <p>Этот год был не забываем, благадоря вам мы проделали многое, добились крутых результатов, сделали очень много всего, мы продолжим развивать наш сайт, чтобы вам было также интересно и весело с нами. Спасибо за все!</p>
+            </div>
+        <!--    <div class="error-card">
+                <h2>Рейтинг временно недоступен</h2>
+                <p>Проводим технические работы!</p>
+            </div> -->
+
+
+    <style>
+        body {
+            font-family: 'Iskra', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #45a049);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 24px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Спасибо вам за этот год <3</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Выпущенно обновлений</h2>
+            <p id="achievementsContent">0</p>
+        </section>
+
+        <section>
+            <h2>Заработанно за 2023</h2>
+            <p id="financialResultsContent">0</p>
+        </section>
+
+        <section>
+            <h2>Ивентов запущено</h2>
+            <p id="futurePlansContent">0</p>
+        </section>
+        <section>
+            <h2>Потраченно на выпуск обновлений</h2>
+            <p id="UpdsContent">0</p>
+        </section>
+        <section>
+            <h2>Подаренно дененг на призы игрокам</h2>
+            <p id="PotratuContent">0</p>
+        </section>
+        <section>
+            <h2>Общее колличество комфорта, которое вы заработали за год</h2>
+            <p id="comf">0</p>
+        </section>
+        <section>
+            <h2>Пик онлайна</h2>
+            <p id="onl">0</p>
+        </section>
+
+
+
+
+    </main>
+
+
+    <script>
+        // Время для анимации (в миллисекундах)
+        var animationDuration = 10000;
+
+        // Итоговые данные
+        var achievementsNumber = 34;
+        var financialResultsNumber = 204991882;
+        var futurePlansNumber = 12;
+        var UpdsContent = 89111000;
+        var PotratuContent = 23919000;
+        var comf = 398416767;
+        var onl = 201001;
+
+        // Запуск анимации для каждого блока
+        animateNumber("achievementsContent", achievementsNumber);
+        animateNumber("financialResultsContent", financialResultsNumber, "currency");
+        animateNumber("futurePlansContent", futurePlansNumber);
+        animateNumber("UpdsContent", UpdsContent, "currency");
+        animateNumber("PotratuContent", PotratuContent, "currency");
+        animateNumber("comf", comf, "currency");
+        animateNumber("onl", onl, "currency");
+
+        function animateNumber(elementId, targetNumber, format = "") {
+            var element = document.getElementById(elementId);
+            var currentNumber = 0;
+            var startTime = null;
+
+            function updateNumber(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = timestamp - startTime;
+
+                if (progress < animationDuration) {
+                    currentNumber = Math.floor((progress / animationDuration) * targetNumber);
+                    element.textContent = (format === "currency") ? formatCurrency(currentNumber) : currentNumber;
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    element.textContent = (format === "currency") ? formatCurrency(targetNumber) : targetNumber;
+                }
+            }
+
+            requestAnimationFrame(updateNumber);
+        }
+
+        function formatCurrency(value) {
+            return "" + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+
+</body>
+
+
+
+
+
+
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
