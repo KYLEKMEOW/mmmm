@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Функция для форматирования чисел
 // Функция для форматирования чисел
 function formatNumber(number) {
-    if (number >= 110000000) return '90000000'; // Добавлено условие для предела в 20 миллионов
+    if (number >= 110000000) return '9999999999'; // Добавлено условие для предела в 20 миллионов
     if (number >= 1e6) return (number / 1e6).toFixed(2) + 'm';
     if (number >= 1e3) return (number / 1e3).toFixed(2) + 'k';
     return number.toString();
@@ -101,6 +101,15 @@ function goToPurchasePage() {
 function goToHomePage() {
     window.location.href = 'index.html'; // Замените 'purchase.html' на название вашего файла новой страницы
 }
+// Функция для перехода на другую страницу
+function goToEventPage() {
+    window.location.href = 'event.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
+// Функция для перехода на другую страницу
+function goToRatPage() {
+    window.location.href = 'rat.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
+
 
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
@@ -357,3 +366,4 @@ function getClubLevel(gold) {
 
 // Вызов функции для отображения клубов при загрузке страницы
 window.onload = renderClubs;
+

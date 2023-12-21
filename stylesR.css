@@ -1,0 +1,25 @@
+body {
+    font-family: 'Iskra', sans-serif;
+    background: linear-gradient(to right, #04708b, #6be1ff);
+    margin: 99;
+    padding: 0;
+}
+
+.gradient-gold {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.gradient-silver {
+  background: linear-gradient(45deg, #C0C0C0, #A9A9A9);
+}
+
+.gradient-bronze {
+  background: linear-gradient(45deg, #CD7F32, #8B4513);
+}
+
+.player {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
