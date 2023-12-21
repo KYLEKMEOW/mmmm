@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 78001999 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 74001992 },
-        { name: '🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 70012221 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 76991882 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 68001992 },
-		{ name: 'GameOON!', score: 12001993 },
+        { name: '️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 100000000 },
+        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 81002993 },
+        { name: '🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 78771662 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 84991888 },
+		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 70019933 },
+		{ name: '🛡️GameOON!', score: 60122991 },
 		{ name: '👗🪙✒️ⓂAmnistaria', score: 500000 },
         // Добавьте своих игроков, при необходимости
     ];
@@ -234,12 +234,12 @@ const clubs = [
     {
         name: "[KM] KYLKI",
 		avatar: "img/s.png",
-		border: "", // Добавьте свойство для рамки (например, "golden-border")
+		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 100000 },
-            { name: "🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 45991 },
-			{ name: "GameOON", contribution: 34000 },
-			{ name: "Начисление от администрации", contribution: 0 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 100000 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 45991 },
+			{ name: "🛡️GameOON", contribution: 34000 },
+			{ name: "Начисление от администрации", contribution: 10000 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -252,6 +252,7 @@ const clubs = [
             { name: "Developer", contribution: 0 },
 			{ name: "gg", contribution: 5555 },
 			{ name: "Код моя жизнь", contribution: 5555 },
+			{ name: "Начисление от администрации", contribution: 1111 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -263,7 +264,7 @@ const clubs = [
             { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 65011 },
             { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 43133 },
 			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 50000 },
-			{ name: "Начисление от администрации", contribution: 0 },
+			{ name: "Начисление от администрации", contribution: 500 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
