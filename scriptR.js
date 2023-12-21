@@ -38,11 +38,11 @@ function updateRankings(players) {
 function simulateRuneIncrement(players) {
   setInterval(() => {
     players.forEach(player => {
-      player.runes += Math.floor(Math.random() * (4001 - 664 + 1)) + 441;
+      player.runes += Math.floor(Math.random() * (12941 - 1102 + 1)) + 928;
     });
 
     updateRankings(players);
-  }, 5000);
+  }, 9000);
 }
 
 // Загрузка данных из localStorage при загрузке страницы
@@ -54,6 +54,7 @@ const players = savedPlayers ? JSON.parse(savedPlayers) : [
   { name: '👗🪙👑🧑‍💻💘❄️Joline', runes: 0 },
   { name: '👗🪙👑🧑‍💻💘❄️Pell', runes: 0 },
   { name: '🛡️GameOON', runes: 0 },
+  { name: '☃️👗🪙✒️ⓂAmnistaria', runes: 0 },
   // Add more players as needed
 ];
 
