@@ -1,8 +1,8 @@
 function formatNumber(number) {
   if (number >= 1000000) {
-    return (number / 1000000).toFixed(3) + 'm';
+    return (number / 1000000).toFixed(2) + 'm';
   } else if (number >= 1000) {
-    return (number / 1000).toFixed(3) + 'k';
+    return (number / 1000).toFixed(2) + 'k';
   } else {
     return number;
   }
@@ -38,7 +38,7 @@ function updateRankings(players) {
 function simulateRuneIncrement(players) {
   setInterval(() => {
     players.forEach(player => {
-      player.runes += Math.floor(Math.random() * (45011 - 999 + 1)) + 999;
+      player.runes += Math.floor(Math.random() * (45011 - 12944 + 1)) + 34811;
     });
 
     updateRankings(players);
@@ -59,3 +59,20 @@ const players = savedPlayers ? JSON.parse(savedPlayers) : [
 ];
 
 simulateRuneIncrement(players);
+
+// Функция для перехода на другую страницу
+function goToPurchasePage() {
+    window.location.href = 'shop.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
+// Функция для перехода на другую страницу
+function goToHomePage() {
+    window.location.href = 'index.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
+// Функция для перехода на другую страницу
+function goToEventPage() {
+    window.location.href = 'event.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
+// Функция для перехода на другую страницу
+function goToRatPage() {
+    window.location.href = 'rat.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
