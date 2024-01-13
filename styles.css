@@ -1,14 +1,15 @@
 body {
     font-family: 'Iskra', sans-serif;
-    background: linear-gradient(to right, #04708b, #6be1ff);
+    background: linear-gradient(to right, #171717, #171717);
     margin: 99;
     padding: 0;
 }
 
 header {
-    background-color: linear-gradient(to right, #04708b, #6be1ff);
+    background-color: linear-gradient(to right, #171717, #171717);
     padding: 1px;
     text-align: center;
+	color: white;
 }
 
 .content {
@@ -26,7 +27,7 @@ header {
 }
 
 .rating-container {
-    background: linear-gradient(to right, #800000, #800075);
+    background: linear-gradient(to right, #444444, #444444);
     border: 5px solid #2c0228;
     border-radius: 5px;
     padding: 15px; 
@@ -123,9 +124,9 @@ header {
     color: white;
 }
 .leage-card {
-    background: linear-gradient(to right, #a1a9ee, #000018); /* Градиентный фон */
+    background: linear-gradient(to right, #444444, #444444); /* Градиентный фон */
     color: white;
-	border: 3px solid #0000cd;
+	border: 3px solid #152A3D;
 }
 
 /* Стили для кнопок */
@@ -155,7 +156,7 @@ header {
 
 
 .go-to-page-button {
-    background-color: #540099;
+    background-color: #444444;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -216,7 +217,7 @@ header {
 
 
 #topPlayers {
-    background: linear-gradient(to right, #6b84ff, #00126b);
+    background: linear-gradient(to right, #444444, #444444);
 	color: white;
     border: 3px solid #0b4c82;
     border-radius: 6px;
@@ -236,7 +237,7 @@ header {
 
 
 #club-container {
-	background: linear-gradient(to right, #ffe5b4, #9bc0c5);
+	background: linear-gradient(to right, #444444, #444444);
 	border: 5px solid #8f7f61;
     border-radius: 6px;
     padding: 10px;
@@ -247,7 +248,7 @@ header {
 }
 
 #club-list {
-    border: 2px solid #8f7f61;
+    border: 2px solid #444444;
     padding: 10px;
 	color: white;
 }
@@ -255,7 +256,7 @@ header {
 .club {
     margin-bottom: 10px;
     padding: 5px;
-    border-bottom: 1px solid #8f7f61;
+    border-bottom: 1px solid #152A3D;
 }
 
 .club h1 {

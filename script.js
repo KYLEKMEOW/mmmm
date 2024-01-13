@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 100000000 },
-        { name: '👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 81002993 },
-        { name: '🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 78771662 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Joline', score: 84991888 },
-		{ name: '👗🪙👑🧑‍💻💘❄️Pell', score: 70019933 },
-		{ name: '🛡️GameOON!', score: 60122991 },
+        { name: '️☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 100000000 },
+        { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 109288414 },
+        { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 87466111 },
+		{ name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 94888111 },
+		{ name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 88177223 },
+		{ name: '☃️🛡️GameOON!', score: 77177222 },
 		{ name: '☃️👗🪙✒️ⓂAmnistaria', score: 500000 },
         // Добавьте своих игроков, при необходимости
     ];
@@ -114,7 +114,7 @@ function goToRatPage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 150000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 500000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -140,10 +140,22 @@ function updateLeagueAndRewards(activityPoints2) {
   let league = '';
   let rewardInfo = '';
   let nextLeague = '';
-    if(activityPoints2 >= 150000000) {
+	if(activityPoints2 >= 1000000000) {
+    league = 'Хранитель';
+    rewardInfo = 'х3.333 золота, Награда "Храни и служи", х2 Золотая MeowPaka';
+    nextLeague = 'В данный момент это максимальная лига.';	
+  } else if(activityPoints2 >= 700000000) {
+    league = 'Страж';
+    rewardInfo = 'х500 золота, Золотая MeowPaka';
+    nextLeague = '1 000 000 000';	
+  } else if(activityPoints2 >= 500000000) {
+    league = 'Дозорный';
+    rewardInfo = 'х500 золота, Золотая MeowPaka';
+    nextLeague = '700 000 000';	
+  } else if(activityPoints2 >= 150000000) {
     league = 'Активист';
     rewardInfo = 'х1.500 золота + х1 Рубиновое Дерево';
-    nextLeague = 'В данный момент это макисмальная лига.';	
+    nextLeague = '500 000 000';	
   } else if(activityPoints2 >= 111111111) {
     league = 'Гражданин';
     rewardInfo = 'х1.111';
@@ -228,7 +240,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(18044); // Имитация добавления 1000 баллов //х2 36088 х1 18044
+  addPointsAndRefreshSystem(36088); // Имитация добавления 1000 баллов //х2 36088 х1 18044
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
