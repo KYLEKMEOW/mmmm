@@ -3,111 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>MEOW SHOP!</title>
+    <link rel="icon" href="img/л14ф.png" type="image/x-icon">
+    <title>MEOW-SHOP</title>
+    <style>
+        body {
+            font-family: iskra, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .item {
+            border: 1px solid #555;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #444;
+        }
+
+        .currency {
+            color: #007bff;
+        }
+
+        .action-currency {
+            color: #28a745;
+        }
+
+        .buy-button {
+            background-color: #b82fe0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .special-offers {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .special-offer, .item {
+            flex: 0 0 18%;
+            border: 1px solid #555;
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .item img, .special-offer img {
+            width: 10%;
+            max-width: 50%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .offer-price {
+            color: #28a745;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-<body>
+
     <header>
-        <h1>MEOW - ПЕРЕРОЖДЕНИЕ <br>МАГАЗИН!</h1>
-        <h4>v11.3.0</h4>
-            <button class="go-to-page-button" onclick="goToHomePage()">Вернуться обратно</button>
-</div>
-
+        <h1>Currency Shop</h1>
     </header>
-                <div class="notification" id="notification">
-                <h3>Добро пожаловать в магазин!</h3>
-                <p>Специальные предложения, валюта и мебель для ТОПа по комфорту! И это все здесь)</p>
-            </div>
 
-<div class="shop-container">
-	    <!-- Специальное предложение -->
-    <div class="special-offer">
-  <!--      <img src="img/дерево.png" alt="Специальное предложение"> -->
-        <h3>Купи по старой цене!</h3>
-        <p>Ведро монет 500 + 300 золота</p>
-        <p>Старая цена: 1500 рублей</p>
-        <p>Новая цена: 550 рублей</p>
-        <div id="special-offer-timer">00:00:00</div>
-        <button class="buy-button" onclick="buySpecialOffer('Специальное предложение', 500, 300, 550)">Купить</button>
-    </div>
-    <!-- Карточка товара 
-        <div class="eve-card">
-        <h3>Набор: "DDoS-атака"</h3>
-        <p>1010 + 1010 Взлома</p>
-        <p>2101 рублей</p>
-        <button class="buy-button" onclick="buyProductEve('DDoS-атака', 1010, 1010, 2101)">Купить</button>
-    </div>  -->
-
-    <div class="product-card">
-   <!--     <img src="img/z.png" alt="Скинка копилка"> -->
-        <h3>Набор: "Свинка копилка"</h3>
-        <p>150+50 золота</p>
-        <p>1150 рублей</p>
-        <button class="buy-button" onclick="buyProduct('Свинка копилка', 150, 50, 1150)">Купить</button>
-    </div>
-        <div class="product-card">
-     <!--   <img src="img/z.png" alt="Скинка копилка"> -->
-        <h3>Набор: "Ведро монет"</h3>
-        <p>500+300 золота</p>
-        <p>1500 рублей</p>
-        <button class="buy-button" onclick="buyProduct('Ведро монет', 500, 300, 1500)">Купить</button>
-    </div>
-         <div class="product-card">
-     <!--   <img src="img/z.png" alt="Скинка копилка"> -->
-        <h3>Набор: "Взрыв"</h3>
-        <p>9999+3333 золота</p>
-        <p>19999 рублей</p>
-        <button class="buy-button" onclick="buyProduct('Взрыв', 9999, 3333, 19999)">Купить</button>
-    </div>
-
-    </div>
-        <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>Дерево</h3>
-        <p>1500 комфорта</p>
-        <p>1500 золота</p>
-        <button class="buy-button" onclick="buyProduct('Дерево', 0, 0, 0)">Купить</button>
-    </div>
+    <section>
+        <div class="item">
+            <h2>Золотые монеты</h2>
+            <img src="img/z.png" alt="Золотые монеты">
+            <p class="currency">350 <span class="currency">золотых монет</span></p>
+            <p class="currency">Цена: 120 <span class="currency">рублей</span></p>
+            <button class="buy-button">Купить</button>
         </div>
-        <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>Стул "3д жизнь"</h3>
-        <p>3333 комфорта</p>
-        <p>3333 золота</p>
-        <button class="buy-button" onclick="buyProduct('Стул 3д жизнь', 0, 0, 0)">Купить</button>
-    </div>
+        <div class="item">
+            <h2>Золотые монеты</h2>
+            <img src="img/z.png" alt="Золотые монеты">
+            <p class="currency">550 <span class="currency">золотых монет</span></p>
+            <p class="currency">Цена: 350 <span class="currency">рублей</span></p>
+            <button class="buy-button">Купить</button>
+        </div>
 
-    </div>
-        <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>Диван "3д жизнь"</h3>
-        <p>3666 комфорта</p>
-        <p>3666 золота</p>
-        <button class="buy-button" onclick="buyProduct('Диван 3д жизнь', 0, 0, 0)">Купить</button>
-    </div>
-       </div>
-        <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>MeowPaka Злыдень</h3>
-        <p>11 111 комфорта</p>
-        <p>11 111 золота</p>
-        <button class="buy-button" onclick="buyProduct('MeowPaka Злыдень', 0, 0, 0)">Купить</button>
-    </div>
-            <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>MeowPaka Повар</h3>
-        <p>22 222 комфорта</p>
-        <p>22 222 золота</p>
-        <button class="buy-button" onclick="buyProduct('MeowPaka Повар', 0, 0, 0)">Купить</button>
-    </div>
-                <div class="product-card">
-   <!--     <img src="img/дерево.png" alt="Скинка копилка"> -->
-        <h3>Рубиновое дерево</h3>
-        <p>125 000 комфорта</p>
-        <p>100 000 золота</p>
-        <button class="buy-button" onclick="buyProduct('Рубиновое дерево', 0, 0, 0)">Купить</button>
-    </div>
-<script src="script.js"></script>
+        <div class="item">
+            <h2>Спорт-кар</h2>
+            <img src="img/ск.png" alt="Серебряные монеты">
+            <p class="currency">+ 1000 <span class="currency">комфорта</span></p>
+            <p class="currency">Цена: 500 <span class="currency">золотых монет</span></p>
+            <button class="buy-button">Купить</button>
+        </div>
+
+        <div class="item">
+            <h2>В данный момент недоступно</h2>
+            <img src="special_coins.jpg" alt="Акционные монеты">
+            <p class="action-currency">Цена: 0 <span class="action-currency">акционных монет</span></p>
+            <button class="buy-button">Купить</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Специальные предложения</h2>
+        <div class="special-offers">
+            <div class="special-offer">
+                <img src="img/z.png" alt="Специальное предложение 1">
+                <img src="img/ск.png" alt="Специальное предложение 1">
+                <p class="offer-price">Состав: золотые монеты х330 + Спорткар</p>
+                <p class="offer-price">Цена пака: 450 <br> Цена без скидки: 700</p>
+                <button class="buy-button">Купить</button>
+            </div>
+      <!--       <div class="special-offer">
+                <img src="offer2.jpg" alt="Специальное предложение 2">
+                <p class="offer-price">Цена пака: 120 <br> Цена без скидки: 150</p>
+                <button class="buy-button">Купить</button>
+            </div> -->
+            <!-- Добавьте еще блоки special-offer при необходимости -->
+        </div>
+    </section>
+
 </body>
 </html>

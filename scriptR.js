@@ -9,9 +9,9 @@ const players = [
 	{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
 ];
 
-const targetScore = 5000000; // 5 000 000, 15 000 000, 25 000 000, 50 000 000, 100 000 000
-const rewardAmount = 500;
-let totalScore = 0;
+const targetScore = 10000000; // 10 000 000, 25 000 000, 50 000 000, 100 000 000, 500 000 000
+const rewardAmount = 14; // 14, 140, 144, 214,1014
+let totalScore = 5;
 
 // Функция для форматирования чисел
 function formatNumber(number) {
@@ -66,7 +66,7 @@ function updateTopPlayers() {
     if (totalScore >= targetScore) {
         goalCountElement.classList.add('goal-achieved');
         targetElement.classList.add('goal-achieved');
-        goalCountElement.innerText = 'Goal Achieved!';
+        goalCountElement.innerText = 'Цель выполнена!';
         rewardElement.innerText = `Поздравляем! Вы дошли до цели, за это вы получаете: х${formatNumber(rewardAmount)} золота.`;
     } else {
         goalCountElement.classList.remove('goal-achieved');
@@ -91,7 +91,7 @@ function formatLastUpdate(date) {
 updateTopPlayers();
 
 // Таймер обратного отсчета
-const eventEndDate = new Date('2024-01-27T00:00:00');
+const eventEndDate = new Date('2024-02-15T19:00:00');
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
@@ -104,7 +104,7 @@ function updateCountdown() {
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        countdownElement.innerText = `До начала ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        countdownElement.innerText = `До завершения ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
     } else {
         countdownElement.innerText = 'Ивент завершен!';
     }

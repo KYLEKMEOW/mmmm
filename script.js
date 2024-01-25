@@ -257,10 +257,11 @@ const clubs = [
 		avatar: "img/s.png",
 		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 100000 },
-            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 45991 },
-			{ name: "🛡️GameOON", contribution: 34000 },
-			{ name: "Начисление от администрации", contribution: 10000 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 0 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 0 },
+			{ name: "🛡️GameOON", contribution: 0 },
+			{ name: "Начисление от администрации", contribution: 0 },
+			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -271,9 +272,10 @@ const clubs = [
         players: [
             { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
             { name: "Developer", contribution: 0 },
-			{ name: "gg", contribution: 5555 },
-			{ name: "Код моя жизнь", contribution: 5555 },
-			{ name: "Начисление от администрации", contribution: 1111 },
+			{ name: "gg", contribution: 0 },
+			{ name: "Код моя жизнь", contribution: 0 },
+			{ name: "Начисление от администрации", contribution: 0 },
+			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -282,10 +284,11 @@ const clubs = [
 		avatar: "img/спецп.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 65011 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 43133 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 50000 },
-			{ name: "Начисление от администрации", contribution: 500 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 0 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 0 },
+			{ name: "Начисление от администрации", contribution: 0 },
+			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
     },
@@ -360,15 +363,15 @@ function renderClubs() {
 function getClubLevel(gold) {
     if (gold >= 0 && gold <= 5000) {
         return 1;
-    } else if (gold >= 5001 && gold <= 25000) {
+    } else if (gold >= 5001 && gold <= 15000) {
         return 2;
-    } else if (gold >= 25001 && gold <= 45000) {
+    } else if (gold >= 15001 && gold <= 35000) {
         return 3;
-    } else if (gold >= 45001 && gold <= 60000) {
+    } else if (gold >= 35001 && gold <= 50000) {
         return 4; // Больше 55000, добавьте дополнительные условия при необходимости
-	} else if (gold >= 60001 && gold <= 90000) {
+	} else if (gold >= 50001 && gold <= 70000) {
         return 5;
-	} else if (gold >= 90001 && gold <= 150000) {
+	} else if (gold >= 70001 && gold <= 110000) {
         return 6;
 	} else {
         return 7;
