@@ -1,35 +1,94 @@
 body {
-    font-family: 'Iskra', sans-serif;
-    background: linear-gradient(to right, #04708b, #6be1ff);
-    margin: 99;
+    font-family: 'iskra', sans-serif;
+    background-color: #000218;
+    margin: 0;
     padding: 0;
-}
-
-.gradient-gold {
-  background: linear-gradient(45deg, #FFD700, #FFA500);
-}
-
-.gradient-silver {
-  background: linear-gradient(45deg, #C0C0C0, #A9A9A9);
-}
-
-.gradient-bronze {
-  background: linear-gradient(45deg, #CD7F32, #8B4513);
-}
-
-.player {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.go-to-page-button {
-    background-color: #540099;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
+	overflow-x: hidden;
+}
+
+#eventRating {
+    background-color: #2D384A;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 650px;
+    text-align: center;
+    color: #FFFF;
+}
+
+.progress-bar {
+    background-color: #eee;
+    height: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #FF4C2B;
+    transition: width 0.3s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    color: #FFFF;
+}
+
+th, td {
+    border: 2px solid #000218;
+    padding: 12px;
+    text-align: left;
+    color: #FFFF;
+}
+
+th {
+    background-color: #000218;
+}
+
+#goal {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#goalCount {
+    font-weight: bold;
+    color: #FF4C2B;
+    transition: color 0.3s ease;
+}
+
+.goal-achieved {
+    color: #FF4C2B;
+}
+
+#reward {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+#lastupd {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+#eventDescription {
+    margin-top: 10px;
+    text-align: left;
+    max-height: 200px; /* Максимальная высота для скролла */
+    overflow-y: auto; /* Включение вертикального скролла, если текст превышает максимальную высоту */
+}
+
+#eventDescription h3 {
+    color: #FF4C2B;
+    margin-bottom: 10px;
 }

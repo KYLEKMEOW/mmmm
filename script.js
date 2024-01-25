@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 100000000 },
-        { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 109288414 },
-        { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 87466111 },
-		{ name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 94888111 },
-		{ name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 88177223 },
-		{ name: '☃️🛡️GameOON!', score: 77177222 },
-		{ name: '☃️👗🪙✒️ⓂAmnistaria', score: 500000 },
+        { name: '️☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 198777113 },
+        { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 167441444 },
+        { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 133005999 },
+		{ name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 100000000 },
+		{ name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 98777111 },
+		{ name: '☃️🛡️GameOON!', score: 184777112 },
+		{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 500000 },
         // Добавьте своих игроков, при необходимости
     ];
 
     // Функция для форматирования чисел
 // Функция для форматирования чисел
 function formatNumber(number) {
-    if (number >= 110000000) return '9999999999'; // Добавлено условие для предела в 20 миллионов
+    if (number >= 200000000) return '9999999999'; // Добавлено условие для предела в 20 миллионов
     if (number >= 1e6) return (number / 1e6).toFixed(2) + 'm';
     if (number >= 1e3) return (number / 1e3).toFixed(2) + 'k';
     return number.toString();
@@ -114,7 +114,7 @@ function goToRatPage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 500000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 700000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;

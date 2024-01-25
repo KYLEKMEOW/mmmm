@@ -3,22 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEOW RUNES</title>
+  <title>MEOW EVENT</title>
   <link rel="stylesheet" href="stylesR.css">
-
-        <h1>MEOW - ПЕРЕРОЖДЕНИЕ</h1>
-        <h4>v14.1.6</h4>
-
-            <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
-            <button class="go-to-page-button" onclick="goToEventPage()">Наши итоги года</button>
-              <button class="go-to-page-button" onclick="goToHomePage()">Вернуться обратно</button>
-
 </head>
 <body>
-  <div id="playersContainer"></div>
-  <button class="go-to-page-button" onclick="goToHomePage()">Купить х2 (1000 золота)</button>
 
-  <script src="scriptR.js"></script>
+<div id="eventRating">
+    <h2>ТОП игроков</h2>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Место</th>
+                <th>Никнейм</th>
+                <th>💗</th>
+            </tr>
+        </thead>
+        <tbody id="playerListBody"></tbody>
+    </table>
+    <div id="goal">Цель сообщества: <span id="goalCount">0</span>/<span id="target">1,000,000</span></div>
+    <div id="reward">Награда: $500 за достижение цели!</div>
+    <div id="lastupd">Вы зашли на сайт: <span id="lastUpdate"></span></div>
+    <div id="countdown"></div>
+    <div id="eventDescription">
+        <h3>Условия ивента:</h3>
+        <p>
+Сообщим заранее, что нужно будет отдалить окно, чтобы прочитать всю ифнормацию о ивенте! <br>- Как и всегда - нажимайте кнопку и зарабатывайте валюту "Сердца"<br>- Выполняйте цели сообщества и получайте дополнительные призы за ивент, всего целей будет 5<br> А теперь о призах: <br> 1 место: 1414 золота + MeowPaka купидон + 14.000 рублей <br> 2 место: 140 золота + 1400 рублей<br> 3 место: 140 золота<br> Также за 1 000 000 сердец вы получаете титул: "💗"<br>Точки ниже написаны для того, чтобы вы могли прочитать всю ифнормацию без отдаления экрана)<br>. <br>. <br>. <br>.<br>.<br>.<br>.<br>.<br>
+        </p>
+    </div>
+</div>
+
+<script src="scriptR.js"></script>
 
 </body>
 </html>
