@@ -257,9 +257,9 @@ const clubs = [
 		avatar: "img/s.png",
 		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 0 },
-            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 0 },
-			{ name: "🛡️GameOON", contribution: 0 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 9855 },
+            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12004 },
+			{ name: "🛡️GameOON", contribution: 512 },
 			{ name: "Начисление от администрации", contribution: 0 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
@@ -270,7 +270,7 @@ const clubs = [
 		avatar: "img/z.png",
 		border: "admin-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙✒️ⓂAmnistaria", contribution: 0 },
+            { name: "👗🪙✒️ⓂAmnistaria", contribution: 555 },
             { name: "Developer", contribution: 0 },
 			{ name: "gg", contribution: 0 },
 			{ name: "Код моя жизнь", contribution: 0 },
@@ -284,9 +284,9 @@ const clubs = [
 		avatar: "img/спецп.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 0 },
-            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 0 },
-			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 0 },
+            { name: "👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 6666 },
+            { name: "👗🪙👑🧑‍💻💘❄️Joline", contribution: 1441 },
+			{ name: "👗🪙👑🧑‍💻💘❄️Pell", contribution: 511 },
 			{ name: "Начисление от администрации", contribution: 0 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
@@ -382,3 +382,55 @@ function getClubLevel(gold) {
 // Вызов функции для отображения клубов при загрузке страницы
 window.onload = renderClubs;
 
+document.addEventListener("DOMContentLoaded", function() {
+  const savedUpgrades = JSON.parse(localStorage.getItem("upgrades")) || {};
+
+  function updateButtonState(upgradeId) {
+    const button = document.getElementById(`upgradeBtn${upgradeId}`);
+    if (savedUpgrades[upgradeId]) {
+      button.classList.add('disabled');
+      button.disabled = true;
+    }
+  }
+
+  function saveUpgradeState(upgradeId) {
+    savedUpgrades[upgradeId] = true;
+    localStorage.setItem("upgrades", JSON.stringify(savedUpgrades));
+  }
+
+  function buyUpgrade(upgradeId) {
+    const button = document.getElementById(`upgradeBtn${upgradeId}`);
+    if (!button.classList.contains('disabled')) {
+      button.classList.add('disabled');
+      button.disabled = true;
+
+      saveUpgradeState(upgradeId);
+    }
+  }
+
+  // Применить сохраненные состояния к кнопкам
+  for (const upgradeId in savedUpgrades) {
+    updateButtonState(upgradeId);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const loadingContainer = document.querySelector('.loading-container');
+  const progressBar = document.getElementById('progressBar');
+
+  function simulateLoading() {
+    let progress = 0;
+    const interval = setInterval(function() {
+      progress += 100 / 14; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
+      progressBar.style.width = `${progress}%`;
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        // Скрытие фона после завершения имитации загрузки
+        loadingContainer.style.visibility = 'hidden';
+      }
+    }, 1000);
+  }
+
+  simulateLoading();
+});

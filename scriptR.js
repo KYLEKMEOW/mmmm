@@ -1,16 +1,18 @@
 // Пример данных об игроках
 const players = [
-    { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 0 },
-    { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 0 },
-    { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 0 },
-    { name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 0 },
-    { name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 0 },
-	{ name: '☃️🛡️GameOON!', score: 0 },
+    { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 11178054 },
+    { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 17588843 },
+    { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 47422192 },
+    { name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 19447234 },
+    { name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 8649602 },
+	{ name: '☃️🛡️GameOON!', score: 57849947 },
 	{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
+	{ name: '🛡️[KM] KYLKI🛡️', score: 0 },
+	{ name: '[Куку]Кукусики', score: 0 },
 ];
 
-const targetScore = 10000000; // 10 000 000, 25 000 000, 50 000 000, 100 000 000, 500 000 000
-const rewardAmount = 14; // 14, 140, 144, 214,1014
+const targetScore = 500000000; // 10 000 000, 25 000 000, 50 000 000, 100 000 000, 500 000 000
+const rewardAmount = 1014; // 14, 140, 144, 214,1014
 let totalScore = 5;
 
 // Функция для форматирования чисел
@@ -111,3 +113,24 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const loadingContainer = document.querySelector('.loading-container');
+  const progressBar = document.getElementById('progressBar');
+
+  function simulateLoading() {
+    let progress = 0;
+    const interval = setInterval(function() {
+      progress += 100 / 3; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
+      progressBar.style.width = `${progress}%`;
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        // Скрытие фона после завершения имитации загрузки
+        loadingContainer.style.visibility = 'hidden';
+      }
+    }, 1000);
+  }
+
+  simulateLoading();
+});
