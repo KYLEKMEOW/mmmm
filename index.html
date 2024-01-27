@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-     <link rel="icon" href="img/л14ф.png" type="image/x-icon">
-    <title>MEOW: Стрелы купидона</title>
+     <link rel="icon" href="img/блг.png" type="image/x-icon">
+    <title>MEOW: Стрелы купидона + Приложение</title>
 </head>
-
+<div class="loading-container">
+  <div class="logo-container">
+    <img src="img/блг.png" alt="Логотип">
+  </div>
+  <div class="loading-text">Загрузка...</div>
+  <div class="progress-bar-container2">
+    <div class="progress-bar2" id="progressBar"></div>
+  </div>
+</div>
 <body>
     <header>
         <body>
@@ -15,15 +23,15 @@
     <!-- Ваш контент здесь -->
 
     <!-- Гирлянда -->
-    <div class="garland">
-        <p>Начался ивент посвящённый 14 февраля, вы готовы?!</p>
+  <!--   <div class="garland">
+        <p>Данные в ТОПе обновились, заходи забирать награды!</p>
         <button class="go-to-page-button" onclick="goToRatPage()">Топ-14 февраля!</button>
-    </div>
+    </div> -->
 
 </body>
 
         <h1>MEOW - ПЕРЕРОЖДЕНИЕ</h1>
-        <h4>v16.0.0</h4>
+        <h4>v16.1.0</h4>
 
             <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
             <button class="go-to-page-button" onclick="goToEventPage()">Наши итоги года</button>
@@ -71,9 +79,8 @@
 
    <div class="side-column">
             <div class="notification" id="notification">
-                <h3>Обновление: 14 февраля [Ивент] и многое другое</h3>
-                <p>Слышите звуки натягивающихся стрел кубидона? ИВЕНТ НАЧАЛСЯ!!!<br>-------------------------------------<br>- Новый топ ивентов, который появляется на сайте ТОЛЬКО в период проведения ивента<br>-------------------------------------<br>- Клубное обновление! Мы переосмыслили систему клубов и внесли в неё много коррективов, из-за этого пришлось обнулить все вложения в клубы<br>-------------------------------------<br>- Магазин 2.0, мы давно пытались обновить его и да, наконец-то это СОВЕРШИЛОСЬ!<br>-------------------------------------<br>- Обновлён логотип к 14 февраля<br>-------------------------------------<br>- Небольшая оптимизация сайта</p>
-                <button class="go-to-page-button" onclick="goToRatPage()">Топ-14 февраля</button>
+                <h3>Обновление: Приложение!</h3>
+                <p>Мы выпустили наш сайт в виде приложения на ваш компьютер, скоро мы исправим все ошибки, чтобы было приятней играть!<br>-------------------------------------<br>- Обновлены данные в ТОПе<br>-------------------------------------<br>- Обновили кнопки покупки улучшений для клуба)<br>-------------------------------------<br>- Загрузочный фон У Р А!!!!!! Мы делали его очень долго, но все время что-то не получалось, что-то было криво, все не так как надо, но теперь он у нас есть!!
             </div>
             <div class="boost-card">
                 <h2>АКТУАЛЬНЫЕ БУСТЫ:</h2>
@@ -85,15 +92,15 @@
                 <button class="event-button">Забрать</button>  
             </div>  -->
 
-          <!--      <div class="leage-card">
-                <h2>Вау!</h2>
-                <p>Принимай награду за лигу, но не забывай, что награда сгорит, если вы не забрали и перешли на следующую лигу!</p>
+                <div class="leage-card">
+                <h2>Награда за ТОП "Стрелы купидона"!</h2>
+                <p>Твоя награда: х512 золота</p>
             <button class="leage-button">Забрать</button>
-            </div> -->
+            </div> 
              <div class="leage-card">
                 <h2>Блог гейм-дизайнера:</h2>
                 <p>Ивент, над которым мы жоска работали наконец-то вышел, счастью просто нет предела, а также переработка магазина - счастье! У Р А </p>
-                  <img src="img/л14ф.png" alt="Скинка копилка">
+                  <img src="img/блг.png" alt="Скинка копилка">
        
         </div>
             <div class="news-card">
@@ -118,11 +125,12 @@
                  <div class="buy-card">
                 <h2>Клубные уровни:</h2>
                 <p>В данный момент клубных уровней 7. <br>1 уровень: от 1 до 5000 вкладов<br>2 уровень: от 5001 до 15000 вкладов<br>3 уровень: от 15001 до 35000<br>4 уровень: от 35001 до 50000<br>5 уровень: от 50001 до 70000<br>6 уровень: от 70001 до 110.000<br>7 уровень: от 110.001<br>-------------------------------------<br>Покупай улучшения для своего клуба снизу на кнопках!</p>
-                <button class="buy-button">Улучшение "-5% на покупку золота" [1 000 вложений]</button>
-                <button class="buy-button">Улучшение "-10% на покупку золота" [11 000 вложений]</button>
-                <button class="buy-button">Улучшение "-5% на покупку мебели за золото" [15 000 вложений]</button>
-                <button class="buy-button">Улучшение "-10% на покупку мебели за золото" [35 000 вложений]</button>
-                <button class="buy-button">Улучшение "-12% на покупку золота" [100 000 вложений]</button>
+				<button id="upgradeBtn1" class="upgrade-button" onclick="buyUpgrade(1)">Улучшение "-5% на покупку золота" [1 000 вложений]</button>
+				<button id="upgradeBtn2" class="upgrade-button" onclick="buyUpgrade(2)">-10% на покупку золота" [11 000 вложений]</button>
+				<button id="upgradeBtn3" class="upgrade-button" onclick="buyUpgrade(3)">Улучшение "-5% на покупку мебели за золото" [15 000 вложений]</button>
+				<button id="upgradeBtn4" class="upgrade-button" onclick="buyUpgrade(4)">Улучшение "-10% на покупку мебели за золото" [35 000 вложений]</button>
+				<button id="upgradeBtn5" class="upgrade-button" onclick="buyUpgrade(5)">Улучшение "-12% на покупку золота" [100 000 вложений]</button>
+
             </div>
 
 </body>
