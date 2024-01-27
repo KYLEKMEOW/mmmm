@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function simulateLoading() {
     let progress = 0;
     const interval = setInterval(function() {
-      progress += 100 / 14; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
+      progress += 100 / 9999999; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
       progressBar.style.width = `${progress}%`;
 
       if (progress >= 100) {
