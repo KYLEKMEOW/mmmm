@@ -313,7 +313,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/фнз.png') center center fixed;
+  background: url('img/фнзк.png') center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -331,6 +331,12 @@ header {
 .loading-text {
   margin-top: 20px;
   font-size: 18px;
+}
+
+.loading-etext {
+  margin-top: 20px;
+  font-size: 18px;
+  color: red;
 }
 
 .progress-bar-container2 {

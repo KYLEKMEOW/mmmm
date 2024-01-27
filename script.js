@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const players = [
         { name: '️☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 198777113 },
         { name: '☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 167441444 },
-        { name: '☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 133005999 },
+        { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 133005999 },
 		{ name: '☃️👗🪙👑🧑‍💻💘❄️Joline', score: 100000000 },
 		{ name: '☃️👗🪙👑🧑‍💻💘❄️Pell', score: 98777111 },
-		{ name: '☃️🛡️GameOON!', score: 184777112 },
+		{ name: '💗☃️🛡️GameOON!', score: 184777112 },
 		{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 500000 },
         // Добавьте своих игроков, при необходимости
     ];
@@ -240,7 +240,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(36088); // Имитация добавления 1000 баллов //х2 36088 х1 18044
+  addPointsAndRefreshSystem(72176); // Имитация добавления 1000 баллов // х4 72176 х2 36088 х1 18044
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
@@ -258,8 +258,8 @@ const clubs = [
 		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
             { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 9855 },
-            { name: "🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12004 },
-			{ name: "🛡️GameOON", contribution: 512 },
+            { name: "💗🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12004 },
+			{ name: "💗🛡️GameOON", contribution: 512 },
 			{ name: "Начисление от администрации", contribution: 0 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
@@ -270,7 +270,7 @@ const clubs = [
 		avatar: "img/z.png",
 		border: "admin-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "👗🪙✒️ⓂAmnistaria", contribution: 555 },
+            { name: "💗👗🪙✒️ⓂAmnistaria", contribution: 555 },
             { name: "Developer", contribution: 0 },
 			{ name: "gg", contribution: 0 },
 			{ name: "Код моя жизнь", contribution: 0 },
@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function simulateLoading() {
     let progress = 0;
     const interval = setInterval(function() {
-      progress += 100 / 9999999; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
+      progress += 100 / 10; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
       progressBar.style.width = `${progress}%`;
 
       if (progress >= 100) {
