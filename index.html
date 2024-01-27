@@ -6,6 +6,28 @@
     <link rel="stylesheet" href="styles.css">
      <link rel="icon" href="img/логоклб.png" type="image/x-icon">
     <title>MEOW: День всех влюбленных</title>
+
+
+    
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(96281061, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96281061" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
 </head>
 <div class="loading-container">
   <div class="logo-container">
@@ -35,10 +57,10 @@
 </body>
 
         <h1>MEOW - ПЕРЕРОЖДЕНИЕ</h1>
-        <h4>v16.2.5</h4>
+        <h4>v16.3.0</h4>
 
             <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
-            <!-- <button class="go-to-page-button" onclick="goToEventPage()">Наши итоги года</button> -->
+            <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
             <button class="go-to-page-button" onclick="goToRatPage()">Топ-14 февраля!</button>
 
 </div>
@@ -49,8 +71,8 @@
 <script>
     function updateOnlineUsers() {
         // Задайте диапазон для имитации посещаемости
-        var minUsers = 1991;
-        var maxUsers = 2111;
+        var minUsers = 21994;
+        var maxUsers = 22011;
 
         // Генерация случайного числа в заданном диапазоне
         var randomUsers = Math.floor(Math.random() * (maxUsers - minUsers + 1)) + minUsers;
@@ -83,8 +105,9 @@
 
    <div class="side-column">
             <div class="notification" id="notification">
-                <h3>Обновление: Профилактика</h3>
-                <p>Сегодня на сайте были проведены профилактические работы, что же исправлено?<br>-------------------------------------<br>- Ускорение загрузки основной страницы, мы провели полноценную оптимизацию и сделали её намного быстрей.<br>-------------------------------------<br>- Добавили четыре  дополнительные награды для игроков ТОПа 14 февраля<br>-------------------------------------<br>- Обновлена система защиты, теперь сайт менее подвержен взлому<br>-------------------------------------<br>- Подготовили почву для следующего ивента<br>-------------------------------------<br>- Сократили длительность ивента 14 февраля, завершается он уже через 5 дней, поторопитесь! <br>-------------------------------------<br>- Шансы на джекпот повышены в несколько раз<br>-------------------------------------<br>- Х4 буст на активность до конца ивента!
+                <h3>Обновление: Блог</h3>
+                <p>Все новости теперь там!<p>
+                <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
             </div>
             <div class="boost-card">
                 <h2>АКТУАЛЬНЫЕ БУСТЫ:</h2>
@@ -101,22 +124,27 @@
                 <p>Твоя награда: х1014 золота</p>
             <button class="leage-button">Забрать</button>
             </div> 
+
              <div class="leage-card">
                 <h2>Блог гейм-дизайнера:</h2>
-                <p>Мы вновь обновили логотип, как он вам? Сообщаем вам, что совсем скоро начнется клубная битва, поэтому советуем всем прихотовиться как следует, ведь бой будет жестоким!  </p>
+                <p>Я теперь там!</p>
+                <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
                   <img src="img/логоклб.png" alt="Скинка копилка">
        
         </div>
+
             <div class="news-card">
                 <h2>Клубная битва: 2.0</h2>
                 <p>Анонс уже на нашем ютуб канале, переходим и смотрим!</p>
             <button class="event-button">Смотреть</button>
             </div>
+
              <div class="buy-card">
                 <h2> </h2>
                 <p> </p>
                 <div id="special-offer-timer">00:00:00</div>
         <button class="buy-button" onclick="buySpecialOffer('   ', 0, 0, 0)">Купить</button>
+        </div>
             </div>
         </div>
     </div>
