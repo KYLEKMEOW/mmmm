@@ -4,180 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-     <link rel="icon" href="img/лого.png" type="image/x-icon">
-    <title>Итоги года</title>
-</head>
-
-<body>
-    <header>
-        <h1>MEOW - Время пришло</h1>
-        <h4>v13.0.3</h4>
-            <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
-            <button class="go-to-page-button" onclick="goToHomePage()">Вернуться обратно</button>
-
-   <div class="side-column">
-            <div class="notification" id="notification">
-                <h3>Спасибо вам!</h3>
-                <p>Этот год был не забываем, благадоря вам мы проделали многое, добились крутых результатов, сделали очень много всего, мы продолжим развивать наш сайт, чтобы вам было также интересно и весело с нами. Спасибо за все!</p>
-            </div>
-        <!--    <div class="error-card">
-                <h2>Рейтинг временно недоступен</h2>
-                <p>Проводим технические работы!</p>
-            </div> -->
-
-
+    <link rel="icon" href="img/логоклб.png" type="image/x-icon">
+    <title>Mnews</title>
     <style>
         body {
-            font-family: 'Iskra', sans-serif;
+            font-family: 'iskra', sans-serif;
+            background-color: #333;
+            color: #fff;
             margin: 0;
             padding: 0;
-            background: #f0f0f0;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        header {
-            background: linear-gradient(to right, #4CAF50, #45a049);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .news-container {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            padding: 20px;
         }
 
-        section {
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+        .news-card {
+            position: relative;
             overflow: hidden;
+            width: calc(33.3333% - 20px);
+            max-width: calc(33.3333% - 20px);
+            border-radius: 10px;
+            background: #222;
+            cursor: pointer;
+            transition: background 0.9s ease-in-out;
+            margin-bottom: 20px;
+            box-sizing: border-box; /* добавлено */
         }
 
-        h2 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-            font-size: 24px;
-        }
-
-        footer {
+        .news-card:hover {
             background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+        }
+
+
+        .news-image {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .author-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .game-designer {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .community-manager {
+            background-color: #9b59b6;
+            color: #fff;
+        }
+
+        .support-staff {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        .programmer {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        /* Дополнительные стили для подробной информации */
+        .detailed-info {
+            display: none;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            color: #fff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Спасибо вам за этот год <3</h1>
-    </header>
+<div class="news-container">
+    
+    <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news3')">
+        <img class="news-image" src="img/news3.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">КЛУБНАЯ БИТВА II!!</div>
+            <div class="news-description">НАЧИНАЕМ!</div>
+            <div class="news-meta">
+                <span class="author-badge community-manager">Комьюнити-менеджер</span>
+                <span>Фев 1, 2024</span>
+            </div>
+        </div>
+    </div>
+    <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news1')">
+        <img class="news-image" src="img/news1.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">Добро пожаловать в блог!</div>
+            <div class="news-description">Все самые интересные моменты будут теперь только тут! (Нажми на новость и узнай подробности обновления)</div>
+            <div class="news-meta">
+                <span class="author-badge game-designer">Геймдизайнер</span>
+                <span>Дек 31, 2023</span>
+            </div>
+        </div>
+    </div>
+    <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news2')">
+        <img class="news-image" src="img/news2.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">Поддержка открыта!</div>
+            <div class="news-description">Есть вопросы? Задавай! Мы всегда готовы ответить)</div>
+            <div class="news-meta">
+                <span class="author-badge support-staff">Куратор поддержки</span>
+                <span>Дек 31, 2023</span>
+            </div>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h2>Выпущенно обновлений</h2>
-            <p id="achievementsContent">0</p>
-        </section>
+    <!-- Добавьте больше новостей по аналогии -->
 
-        <section>
-            <h2>Заработанно за 2023</h2>
-            <p id="financialResultsContent">0</p>
-        </section>
+</div>
 
-        <section>
-            <h2>Ивентов запущено</h2>
-            <p id="futurePlansContent">0</p>
-        </section>
-        <section>
-            <h2>Потраченно на выпуск обновлений</h2>
-            <p id="UpdsContent">0</p>
-        </section>
-        <section>
-            <h2>Подаренно дененг на призы игрокам</h2>
-            <p id="PotratuContent">0</p>
-        </section>
-        <section>
-            <h2>Общее колличество комфорта, которое вы заработали за год</h2>
-            <p id="comf">0</p>
-        </section>
-        <section>
-            <h2>Пик онлайна</h2>
-            <p id="onl">0</p>
-        </section>
+<!-- Подробная информация -->
+<div id="news1" class="detailed-info">
+    <div class="close-btn" onclick="hideDetailedInfo('news1')">x</div>
+    <h2>Новости уходят с основной страницы сюда, чтобы не мешать следить вам за рейтингом</h2>
+    <p>Сообщаем, что до завершения клубной битвы осталось совсем немного времени, поторопитесь! <br>- Исправили кучу ошибок, которые вы даже не замечали <br>- Улучшена производительность сайта, загрузка теперь точно должна стать быстрей!!!<br>- Доделали контент для битвы клубов, осталось совсем чуть-чуть<br>- Полноценно открыли работу технической поддержки!</p>
+    <span class="author-badge game-designer">Геймдизайнер</span>
+</div>
+<!-- Подробная информация -->
+<div id="news2" class="detailed-info">
+    <div class="close-btn" onclick="hideDetailedInfo('news2')">x</div>
+    <h2>Кстати! Нам нужны работники, возможно им станешь именно ты!</h2>
+    <p></p>
+    <span class="author-badge support-staff">Куратор поддержки</span>
+</div>
 
+<script>
+    function showDetailedInfo(newsId) {
+        document.getElementById(newsId).style.display = 'block';
+    }
 
+    function hideDetailedInfo(newsId) {
+        document.getElementById(newsId).style.display = 'none';
+    }
+</script>
 
-
-    </main>
-
-
-    <script>
-        // Время для анимации (в миллисекундах)
-        var animationDuration = 10000;
-
-        // Итоговые данные
-        var achievementsNumber = 34;
-        var financialResultsNumber = 204991882;
-        var futurePlansNumber = 12;
-        var UpdsContent = 89111000;
-        var PotratuContent = 23919000;
-        var comf = 398416767;
-        var onl = 201001;
-
-        // Запуск анимации для каждого блока
-        animateNumber("achievementsContent", achievementsNumber);
-        animateNumber("financialResultsContent", financialResultsNumber, "currency");
-        animateNumber("futurePlansContent", futurePlansNumber);
-        animateNumber("UpdsContent", UpdsContent, "currency");
-        animateNumber("PotratuContent", PotratuContent, "currency");
-        animateNumber("comf", comf, "currency");
-        animateNumber("onl", onl, "currency");
-
-        function animateNumber(elementId, targetNumber, format = "") {
-            var element = document.getElementById(elementId);
-            var currentNumber = 0;
-            var startTime = null;
-
-            function updateNumber(timestamp) {
-                if (!startTime) startTime = timestamp;
-                var progress = timestamp - startTime;
-
-                if (progress < animationDuration) {
-                    currentNumber = Math.floor((progress / animationDuration) * targetNumber);
-                    element.textContent = (format === "currency") ? formatCurrency(currentNumber) : currentNumber;
-                    requestAnimationFrame(updateNumber);
-                } else {
-                    element.textContent = (format === "currency") ? formatCurrency(targetNumber) : targetNumber;
-                }
-            }
-
-            requestAnimationFrame(updateNumber);
-        }
-
-        function formatCurrency(value) {
-            return "" + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-    </script>
-
-</body>
-
-
-
-
-
-
-<body>
-    <script src="script.js"></script>
 </body>
 </html>
