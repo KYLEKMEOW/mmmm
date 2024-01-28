@@ -1,19 +1,19 @@
 // Пример данных об игроках
 const players = [
-    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 712444467894 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 352759619255 },
-    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 171759076372 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 167598145298 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 579450671309 },
-	{ name: '💗☃️🛡️GameOON!', score: 3159480179259 },
-	{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
-	{ name: '🛡️[KM] KYLKI🛡️', score: 0 },
-	{ name: '[Куку]Кукусики', score: 0 },
+    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 0 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 0 },
+    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 0 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 0 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 0 },
+    { name: '💗☃️🛡️GameOON!', score: 0 },
+    { name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
+    { name: '🛡️[KM] KYLKI🛡️', score: 0 },
+    { name: '[Куку]Кукусики', score: 0 },
 ];
 
-const targetScore = 100000000000000; // 10 000 000, 25 000 000, 50 000 000, 100 000 000, 500 000 000, 1 000 000 000, 5 000 000 000, 15 000 000 000, 100 000 000 000
-const rewardAmount = 14000; // 14, 140, 144, 214,1014, 1000, 1144, 1400, 1414
-let totalScore = 5;
+const targetScore = 2000000; // 2 000 000, 30 000 000, 50 000 000, 100 000 000, 500 000 000, 1 000 000 000, 5 000 000 000, 15 000 000 000, 100 000 000 000
+const rewardAmount = 100; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
+let totalScore = 0;
 
 // Функция для форматирования чисел
 function formatNumber(number) {
@@ -31,10 +31,18 @@ function updateTopPlayers() {
     playerListBody.innerHTML = '';
     totalScore = 0;
 
-    players.sort((a, b) => b.score - a.score); // Сортируем игроков по убыванию очков
+    // Установи количество игроков в топе
+    const topPlayersCount = 2;
 
-    players.slice(0, 3).forEach((player, index) => {
+    // Фильтруем игроков, оставляем только тех, у кого score больше 0
+    const topPlayers = players.filter(player => player.score > 0);
+
+    // Сортируем игроков по убыванию очков
+    topPlayers.sort((a, b) => b.score - a.score);
+
+    for (let index = 0; index < Math.min(topPlayersCount, topPlayers.length); index++) {
         const position = index + 1;
+        const player = topPlayers[index];
         const row = `<tr>
                         <td>${position}</td>
                         <td>${player.name}</td>
@@ -42,22 +50,12 @@ function updateTopPlayers() {
                     </tr>`;
         playerListBody.innerHTML += row;
         totalScore += player.score;
-    });
-
-    players.slice(3, 5).forEach((player, index) => {
-        const position = index + 4; // 4 и 5 место
-        const row = `<tr>
-                        <td>${position}</td>
-                        <td>${player.name}</td>
-                        <td>${formatNumber(player.score)}</td>
-                    </tr>`;
-        playerListBody.innerHTML += row;
-        totalScore += player.score;
-    });
+    }
 
     const progressPercentage = (totalScore / targetScore) * 100;
     progressFillElement.style.width = `${progressPercentage}%`;
     goalCountElement.innerText = formatNumber(totalScore);
+
 
     // Обновление цели
     const targetElement = document.getElementById('target');
