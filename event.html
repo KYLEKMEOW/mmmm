@@ -129,10 +129,35 @@
 <body>
 
 <div class="news-container">
+            <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news5')">
+        <img class="news-image" src="img/upd.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">Клубная битва не приходит одна!</div>
+            <div class="news-description">Обновления и прочие классные шутки!</div>
+            <div class="news-meta">
+                <span class="author-badge community-manager">Комьюнити-менеджер</span>
+                <span>Фев 1, 2024</span>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news4')">
+        <img class="news-image" src="img/news1.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">А мы с вами ещё не знакомы?)</div>
+            <div class="news-description">Я Комьюнити менеджер!</div>
+            <div class="news-meta">
+                <span class="author-badge community-manager">Комьюнити-менеджер</span>
+                <span>Фев 1, 2024</span>
+            </div>
+        </div>
+    </div>
     
     <!-- Пример новости -->
     <div class="news-card" onclick="showDetailedInfo('news3')">
-        <img class="news-image" src="img/news3.png" alt="Cover Image">
+        <img class="news-image" src="img/news1.png" alt="Cover Image">
         <div class="news-content">
             <div class="news-title">КЛУБНАЯ БИТВА II!!</div>
             <div class="news-description">НАЧИНАЕМ!</div>
@@ -185,6 +210,31 @@
     <p></p>
     <span class="author-badge support-staff">Куратор поддержки</span>
 </div>
+<!-- Подробная информация -->
+<div id="news4" class="detailed-info">
+    <div class="close-btn" onclick="hideDetailedInfo('news4')">x</div>
+    <h2>Мы ещё не знакомы?</h2>
+    <p>Меня зовут Саша, я отвественная за начисления, активности и прочие прикольные шутки в сообществе, надеюсь что мы с вами подружимся!</p>
+    <span class="author-badge community-manager">Комьюнити-менеджер</span>
+</div>
+
+<!-- Подробная информация -->
+<div id="news5" class="detailed-info">
+    <div class="close-btn" onclick="hideDetailedInfo('news5')">x</div>
+    <h2>Что нового?</h2>
+    <p>Начислила вам награду за прохождение акции <br>Наши программисты активно поработали и улучшили передачу данных аккаунтов на сервер быстрее<br>Обновили топ ивента, теперь данные там под новую битву<br>Обновили экономику ивента, естественно мы её доработаем после того, как появятся первые данные в топе, дабы понять насколько легко будет доходить до целей, ведь у каждого человека в клубе будет возможность дать баллы от себя, как вам такое? Это я придумала!!</p>
+    <span class="author-badge community-manager">Комьюнити-менеджер</span>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 <script>
     function showDetailedInfo(newsId) {
