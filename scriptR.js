@@ -7,12 +7,12 @@ const players = [
     { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 0 },
     { name: '💗☃️🛡️GameOON!', score: 0 },
     { name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
-    { name: '🛡️[KM] KYLKI🛡️', score: 0 },
-    { name: '[Куку]Кукусики', score: 0 },
+    { name: '🛡️[KM] KYLKI🛡️', score: 163283874521344 }, // 3 
+    { name: '[Куку]Кукусики', score: 121950914794152 }, // 3
 ];
 
-const targetScore = 2000000; // 2 000 000, 30 000 000, 50 000 000, 100 000 000, 500 000 000, 1 000 000 000, 5 000 000 000, 15 000 000 000, 100 000 000 000
-const rewardAmount = 100; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
+const targetScore = 5000000000000000; // 200 000 000, 3 500 000 000, 100 000 000 000, 5 000 000 000 000, 100 000 000 000 000, 500 000 000 000, 150 000 000 000 000, 100 000 000 000 000
+const rewardAmount = 500; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
 let totalScore = 0;
 
 // Функция для форматирования чисел
@@ -91,7 +91,7 @@ function formatLastUpdate(date) {
 updateTopPlayers();
 
 // Таймер обратного отсчета
-const eventEndDate = new Date('2024-01-31T19:00:00');
+const eventEndDate = new Date('2024-01-29T19:00:00');
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
