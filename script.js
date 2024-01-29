@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Пример данных для рейтинга (замените их своими данными)
     const players = [
-        { name: '️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 212691510 },
-        { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 190883246 },
-        { name: '💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 239410798 },
-		{ name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 104000000 },
-		{ name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 151128979 },
-		{ name: '💗☃️GameOON!', score: 205102594 },
+        { name: '️🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 314783434 },
+        { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 211880403 },
+        { name: '🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 397421924 },
+		{ name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 159120000 },
+		{ name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 205535411 },
+		{ name: '❓🛡️💗☃️GameOON!', score: 283041579 },
 		{ name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 500000 },
 		{ name: '️ⓂShaSha', score: 79797 },
+		{ name: '️СВОБОДНОЕ МЕСТО', score: 999 },
+		{ name: '️СВОБОДНОЕ МЕСТО', score: 999 },
         // Добавьте своих игроков, при необходимости
     ];
 
