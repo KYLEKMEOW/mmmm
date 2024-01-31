@@ -129,6 +129,22 @@
 <body>
 
 <div class="news-container">
+     <!-- Пример новости -->
+    <div class="news-card" onclick="showDetailedInfo('news8')">
+        <img class="news-image" src="img/upd.png" alt="Cover Image">
+        <div class="news-content">
+            <div class="news-title">Большое обновление!</div>
+            <div class="news-description">По большей мере по технической части, но тоже хорошо!</div>
+            <div class="news-meta">
+                <span class="author-badge game-designer">Геймдизайнер</span>
+                <span class="author-badge programmer">Программист</span>
+                <span class="author-badge community-manager">Комьюнити-менеджер</span>
+                <span>март 1, 2024</span>
+            </div>
+        </div>
+    </div>
+
+
       <!-- Пример новости -->
     <div class="news-card" onclick="showDetailedInfo('news7')">
         <img class="news-image" src="img/news1.png" alt="Cover Image">
@@ -267,6 +283,18 @@
     <span class="author-badge community-manager">Комьюнити-менеджер</span>
     <span class="author-badge programmer">Перейти к заполнению</span>
 </div>
+
+<!-- Подробная информация -->
+<div id="news8" class="detailed-info">
+    <div class="close-btn" onclick="hideDetailedInfo('news8')">x</div>
+    <h2>Большое обновление!</h2>
+    <p>Уважаемые пользователи мобильных устройвств, к сожалению наш сайт больше не может обслужить вас, ведь на настройку дизайна для пользователей мобильной весрии уйдет очень и очень много времени, нам придётся с вами попращаться, простите...<br>- Как и обещали обновили кнопку в окне "забрать"<br>- Добавили новые улучшения для клуба<br>- Обновили загрузочный фон<br>- Добавили двух новых участников в ТОПы! Встречайте - мурмяу и кисуля, милые кошечки, которые теперь будут активно бороться в ТОПах!<br>- Исрпавлены множественные баги, но этой еще не все, ведь загрузка на основную страницу стала в несколько раз быстрей!<br>- Запущен таймер, который отсчитывает время до начала ивента, уже совсем скоро начинаем!<br>- Запустили ивент "х8 Активность" до старта ивента (да-да, таких ивентов еще не было!!)<br>- Запустили ивент "х2 золото", за покупку любого пака двойная выгода!</p>
+    <span class="author-badge game-designer">Геймдизайнер</span>
+    <span class="author-badge programmer">Программист</span>
+    <span class="author-badge community-manager">Комьюнити-менеджер</span>
+</div>
+
+
 
 
 
