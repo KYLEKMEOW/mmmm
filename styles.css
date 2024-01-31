@@ -129,6 +129,8 @@ header {
 	border: 3px solid #152A3D;
 }
 
+
+
 /* Стили для кнопок */
 .buy-button {
     background-color: #b82fe0;
@@ -182,6 +184,17 @@ header {
     border-radius: 25px;
     cursor: pointer;
     font-size: 20px;
+}
+
+.N-button {
+    background: linear-gradient(to right, #d8c793, #cab46e);
+    color: white;
+    padding: 5px 20px;
+    border: 2px linear-gradient(to right, ##cab46e, ##cab46e);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+	font: Iskra;
 }
 
 #progress-info {
@@ -313,7 +326,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/фнзк.png') center center fixed;
+  background: url('img/фнз1.png') center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -321,7 +334,7 @@ header {
   align-items: center;
   color: #fff;
   visibility: visible; /* Изначальная видимость фона */
-  transition: visibility 1s linear; /* Анимация скрытия фона */
+  transition: visibility 3s linear; /* Анимация скрытия фона */
 }
 
 .logo-container img {

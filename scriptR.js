@@ -1,18 +1,21 @@
 // Пример данных об игроках
 const players = [
-    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 0 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 0 },
-    { name: '💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 0 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 0 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 0 },
-    { name: '💗☃️🛡️GameOON!', score: 0 },
-    { name: '💗☃️👗🪙✒️ⓂAmnistaria', score: 0 },
-    { name: '🛡️[KM] KYLKI🛡️', score: 163283874521344 }, // 3 
-    { name: '[Куку]Кукусики', score: 121950914794152 }, // 3
+    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 1 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 1 },
+    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 1 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 1 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 1 },
+    { name: '🛡️💗☃️🛡️GameOON!', score: 1 },
+    { name: '🦉💗☃️👗🪙✒️ⓂAmnistaria', score: 1 },
+	{ name: '🦉ⓂShaSha', score: 1 },
+	{ name: '️Kisylya', score: 1 },
+	{ name: '️MYrMeOW', score: 1 },
+    { name: '🛡️[KM] KYLKI🛡️', score: 0 }, // 3 
+    { name: '[Куку]Кукусики', score: 0 }, // 3
 ];
 
-const targetScore = 5000000000000000; // 200 000 000, 3 500 000 000, 100 000 000 000, 5 000 000 000 000, 100 000 000 000 000, 500 000 000 000, 150 000 000 000 000, 100 000 000 000 000
-const rewardAmount = 500; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
+const targetScore = 5; // 200 000 000, 3 500 000 000, 100 000 000 000, 5 000 000 000 000, 100 000 000 000 000, 500 000 000 000, 150 000 000 000 000, 100 000 000 000 000
+const rewardAmount = 0; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
 let totalScore = 0;
 
 // Функция для форматирования чисел
@@ -32,7 +35,7 @@ function updateTopPlayers() {
     totalScore = 0;
 
     // Установи количество игроков в топе
-    const topPlayersCount = 2;
+    const topPlayersCount = 5;
 
     // Фильтруем игроков, оставляем только тех, у кого score больше 0
     const topPlayers = players.filter(player => player.score > 0);
@@ -91,7 +94,7 @@ function formatLastUpdate(date) {
 updateTopPlayers();
 
 // Таймер обратного отсчета
-const eventEndDate = new Date('2024-01-29T19:00:00');
+const eventEndDate = new Date('2024-02-02T19:00:00');
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {
@@ -104,7 +107,7 @@ function updateCountdown() {
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        countdownElement.innerText = `До завершения ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        countdownElement.innerText = `До начала ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
     } else {
         countdownElement.innerText = 'Ивент завершен!';
     }
