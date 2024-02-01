@@ -117,7 +117,7 @@ function goToRatPage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 700000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 1000000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -260,9 +260,9 @@ const clubs = [
 		avatar: "img/s.png",
 		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border")
         players: [
-            { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 15000 },
-            { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 12004 },
-			{ name: "🛡️💗GameOON", contribution: 1933 },
+            { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 24000 },
+            { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 15766 },
+			{ name: "🛡️💗GameOON", contribution: 12000 },
 			{ name: "Начисление от администрации", contribution: 5761 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
@@ -291,6 +291,18 @@ const clubs = [
             { name: "💗👗🪙👑🧑‍💻💘❄️Joline", contribution: 3445 },
 			{ name: "💗👗🪙👑🧑‍💻💘❄️Pell", contribution: 21000 },
 			{ name: "Начисление от администрации", contribution: 1261 },
+			{ name: "Покупки", contribution: 0 },
+            // Добавьте дополнительных игроков при необходимости
+        ],
+    },
+		    {
+        name: "[mur] Кошечки",
+		avatar: "img/фнз1.png",
+		border: "", // Добавьте свойство для рамки (например, "golden-border")
+        players: [
+            { name: "️MYrMeOW", contribution: 78995 },
+			{ name: "Kisylya", contribution: 60599 },
+			{ name: "Начисление от администрации", contribution: 0 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
@@ -432,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Скрытие фона после завершения имитации загрузки
         loadingContainer.style.visibility = 'hidden';
       }
-    }, 100);
+    }, 500);
   }
 
   simulateLoading();

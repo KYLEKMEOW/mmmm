@@ -1,21 +1,21 @@
 // Пример данных об игроках
 const players = [
-    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 1 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 1 },
-    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 1 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 1 },
-    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 1 },
-    { name: '🛡️💗☃️🛡️GameOON!', score: 1 },
+    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', score: 93978 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', score: 44471 },
+    { name: '🛡️💗☃️🛡️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', score: 60676 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', score: 28231 },
+    { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', score: 76662 },
+    { name: '🛡️💗☃️🛡️GameOON!', score: 7361 },
     { name: '🦉💗☃️👗🪙✒️ⓂAmnistaria', score: 1 },
 	{ name: '🦉ⓂShaSha', score: 1 },
-	{ name: '️Kisylya', score: 1 },
-	{ name: '️MYrMeOW', score: 1 },
+	{ name: '️Kisylya', score: 71887 },
+	{ name: '️MYrMeOW', score: 90202 },
     { name: '🛡️[KM] KYLKI🛡️', score: 0 }, // 3 
     { name: '[Куку]Кукусики', score: 0 }, // 3
 ];
 
-const targetScore = 5; // 200 000 000, 3 500 000 000, 100 000 000 000, 5 000 000 000 000, 100 000 000 000 000, 500 000 000 000, 150 000 000 000 000, 100 000 000 000 000
-const rewardAmount = 0; // 100, 150, 151, 160, 200, 500, 1000, 1000, 1000
+const targetScore = 50000000; // 50 000 000, 500 000 000, 5 000 000 000, 35 000 000 000, 300 000 000 000
+const rewardAmount = 150; // 150, 330, 400, 450, 500
 let totalScore = 0;
 
 // Функция для форматирования чисел
@@ -107,7 +107,7 @@ function updateCountdown() {
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        countdownElement.innerText = `До начала ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        countdownElement.innerText = `До завершения ивента: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
     } else {
         countdownElement.innerText = 'Ивент завершен!';
     }
