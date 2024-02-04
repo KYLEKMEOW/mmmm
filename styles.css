@@ -291,6 +291,9 @@ header {
 .golden-border {
     border: 3px solid gold;
 }
+.active-border {
+    border: 3px solid blue;
+}
 .admin-border {
     border: 3px solid red;
 }
