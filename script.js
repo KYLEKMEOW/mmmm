@@ -143,7 +143,7 @@ function updateLeagueAndRewards(activityPoints2) {
   let league = '';
   let rewardInfo = '';
   let nextLeague = '';
-  } else if(activityPoints2 >= 6000000000) {
+    if(activityPoints2 >= 6000000000) {
     league = 'Взрыв мозга';
     rewardInfo = 'х900 золота, MeowPaka "БУМ"';
     nextLeague = 'В данный момент это максимальная лига.';
