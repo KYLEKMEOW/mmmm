@@ -117,7 +117,7 @@ function goToRatPage() {
 // Функция для обновления прогресс бара и информации о лиге
 function updateUI(activityPoints2, league, rewardInfo, nextLeague) {
   const progressBar = document.getElementById('progress-bar');
-  progressBar.style.width = (activityPoints2 / 1000000000) * 100 + '%';
+  progressBar.style.width = (activityPoints2 / 3000000000) * 100 + '%';
 
   document.getElementById('activity-points').innerText = formatNumber(activityPoints2);
   document.getElementById('current-league').innerText = league;
@@ -143,10 +143,18 @@ function updateLeagueAndRewards(activityPoints2) {
   let league = '';
   let rewardInfo = '';
   let nextLeague = '';
-	if(activityPoints2 >= 1000000000) {
+  } else if(activityPoints2 >= 6000000000) {
+    league = 'Взрыв мозга';
+    rewardInfo = 'х900 золота, MeowPaka "БУМ"';
+    nextLeague = 'В данный момент это максимальная лига.';
+  } else if(activityPoints2 >= 3000000000) {
+    league = 'Энергитический волшебник';
+    rewardInfo = 'х777 золота';
+    nextLeague = '6 000 000 000';
+  } else if(activityPoints2 >= 1000000000) {
     league = 'Хранитель';
     rewardInfo = 'х3.333 золота, Награда "Храни и служи", х2 Золотая MeowPaka';
-    nextLeague = 'В данный момент это максимальная лига.';	
+    nextLeague = '3 000 000 000';	
   } else if(activityPoints2 >= 700000000) {
     league = 'Страж';
     rewardInfo = 'х500 золота, Золотая MeowPaka';
@@ -243,7 +251,7 @@ function addPointsAndRefreshSystem(pointsToAdd) {
 
 // Имитация добавления баллов каждые 5 секунд
 setInterval(function () {
-  addPointsAndRefreshSystem(144352); // Имитация добавления 1000 баллов // х4 72176 х2 36088 х1 18044 x8 144352
+  addPointsAndRefreshSystem(18044); // Имитация добавления 1000 баллов // х4 72176 х2 36088 х1 18044 x8 144352
 }, 9000); // Каждые 5 секунд
 
 // Обновление системы при загрузке страницы
@@ -259,14 +267,14 @@ const clubs = [
         name: "[KM] KYLKI",
 		avatar: "img/s.png",
 		border: "golden-border", // Добавьте свойство для рамки (например, "golden-border" active-border)
-		comfort: 0, // Добавлено свойство "Комфорт"
-        activity: 0, // Добавлено свойство "Активность"
+		comfort: 13859, // Добавлено свойство "Комфорт"
+        activity: 139223, // Добавлено свойство "Активность"
         activityResetTimer: 30, // Таймер для обнуления активности каждый месяц (в днях)
         players: [
             { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", contribution: 24000 },
             { name: "🛡️💗🫂👗🪙👑🧑‍💻💘❄️Hola COLA", contribution: 15766 },
 			{ name: "🛡️💗GameOON", contribution: 12000 },
-			{ name: "Начисление от администрации", contribution: 5761 },
+			{ name: "Начисление от администрации", contribution: 19555 },
 			{ name: "Покупки", contribution: 0 },
             // Добавьте дополнительных игроков при необходимости
         ],
@@ -292,12 +300,12 @@ const clubs = [
         name: "[Куку]Кукусики",
 		avatar: "img/спецп.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
-		comfort: 0, // Добавлено свойство "Комфорт"
-        activity: 14, // Добавлено свойство "Активность"
+		comfort: 25000, // Добавлено свойство "Комфорт"
+        activity: 178555, // Добавлено свойство "Активность"
         activityResetTimer: 30, // Таймер для обнуления активности каждый месяц (в днях)
         players: [
-            { name: "💗👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 8955 },
-            { name: "💗👗🪙👑🧑‍💻💘❄️Joline", contribution: 3445 },
+            { name: "💗👗🪙👑🧑‍💻💘❄️GoGoMeMe", contribution: 13945 },
+            { name: "💗👗🪙👑🧑‍💻💘❄️Joline", contribution: 17857 },
 			{ name: "💗👗🪙👑🧑‍💻💘❄️Pell", contribution: 21000 },
 			{ name: "Начисление от администрации", contribution: 1261 },
 			{ name: "Покупки", contribution: 0 },
@@ -308,8 +316,8 @@ const clubs = [
         name: "[mur] Кошечки",
 		avatar: "img/фнз1.png",
 		border: "", // Добавьте свойство для рамки (например, "golden-border")
-		comfort: 0, // Добавлено свойство "Комфорт"
-        activity: 0, // Добавлено свойство "Активность"
+		comfort: 55555, // Добавлено свойство "Комфорт"
+        activity: 201194, // Добавлено свойство "Активность"
         activityResetTimer: 1, // Таймер для обнуления активности каждый месяц (в днях)
         players: [
             { name: "️MYrMeOW", contribution: 78995 },
