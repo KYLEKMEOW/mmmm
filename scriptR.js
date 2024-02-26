@@ -94,7 +94,7 @@ function formatLastUpdate(date) {
 updateTopPlayers();
 
 // Таймер обратного отсчета
-const eventEndDate = new Date('2024-02-02T19:00:00');
+const eventEndDate = new Date('2024-03-07T19:00:00');
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {

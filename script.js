@@ -494,3 +494,111 @@ document.addEventListener("DOMContentLoaded", function() {
   simulateLoading();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Уровни и их соответствующий опыт
+    const levels = [
+        { level: 1, exp: 0 },
+        { level: 2, exp: 1000 },
+        { level: 3, exp: 5000 },
+        { level: 4, exp: 14000 }
+    ];
+
+    // Пример данных из базы данных (данные о золоте для каждого игрока)
+    const playersFromDatabase = [
+        { name: "🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", gold: 19885 },
+        { name: "💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe", gold: 12948 },
+        { name: "🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", gold: 8595 },
+        { name: "💗☃️👗🪙👑🧑‍💻💘❄️Joline", gold: 995 },
+		{ name: "💗☃️👗🪙👑🧑‍💻💘❄️Pell", gold: 12 },
+		{ name: "❓🛡️💗☃️GameOON!", gold: 38775 },
+		{ name: "🦉💗☃️👗🪙✒️ⓂAmnistaria", gold: 0 },
+		{ name: "🦉ⓂShaSha", gold: 0 },
+		{ name: "️Kisylya", gold: 98445 },
+		{ name: "️MYrMeOW", gold: 119211 }
+    ];
+
+    // Функция для обновления рейтинга с новыми данными
+    function updateRating() {
+        const container = document.getElementById("ratingContainer");
+        container.innerHTML = ""; // Очищаем контейнер
+
+        // Сортировка игроков по убыванию золота
+        const sortedPlayers = playersFromDatabase.slice().sort((a, b) => b.gold - a.gold);
+
+        // Пересчитываем опыт каждого игрока и обновляем рейтинг
+        sortedPlayers.forEach((player, index) => {
+            const playerElement = document.createElement("div");
+            playerElement.classList.add("player");
+
+            const playerName = document.createElement("span");
+            playerName.classList.add("player-name");
+            playerName.textContent = `${player.name} - Уровень ${getLevel(player.gold)} (${formatExp(getExp(player.gold))} exp) - Золото: ${formatGold(player.gold)}`;
+
+            const playerTitle = document.createElement("span");
+            playerTitle.classList.add("player-title");
+            playerTitle.textContent = getTitle(player.gold);
+
+            playerElement.appendChild(playerName);
+            playerElement.appendChild(playerTitle);
+            container.appendChild(playerElement);
+
+            // Добавляем горизонтальную линию после каждого игрока, кроме последнего
+            if (index < sortedPlayers.length - 1) {
+                const line = document.createElement("hr");
+                container.appendChild(line);
+            }
+        });
+
+        // Вывод информации о уровнях и опыте ниже рейтинга
+        const levelsInfo = document.getElementById("levelsInfo");
+        levelsInfo.innerHTML = "";
+        levels.forEach(level => {
+            const levelElement = document.createElement("div");
+            levelElement.textContent = `Уровень ${level.level} - ${formatExp(level.exp)} exp`;
+            levelsInfo.appendChild(levelElement);
+        });
+    }
+
+    // Функция для определения титула в зависимости от количества золота
+    function getTitle(gold) {
+        if (gold >= 200000) {
+            return "Богатей";
+        } else if (gold >= 50000) {
+            return "Не бедняк";
+        } else if (gold >= 10000) {
+            return "Почти богач";
+        } else {
+            return "Новичок";
+        }
+    }
+
+    // Функция для определения уровня по опыту
+    function getLevel(gold) {
+        const exp = getExp(gold);
+        for (let i = levels.length - 1; i >= 0; i--) {
+            if (exp >= levels[i].exp) {
+                return `⭐ Уровень ${levels[i].level}`;
+            }
+        }
+        return `⭐ Уровень 1`; // Вернуть первый уровень, если опыта недостаточно для других уровней
+    }
+
+    // Функция для расчета опыта на основе количества золота
+    function getExp(gold) {
+        // Пример: считаем опыт как 10% от количества золота
+        return Math.floor(gold * 0.1); // Пример расчета опыта
+    }
+
+    // Функция для форматирования опыта
+    function formatExp(exp) {
+        return exp.toLocaleString("ru-RU").replace(/,/g, ' ');
+    }
+
+    // Функция для форматирования золота
+    function formatGold(gold) {
+        return gold.toLocaleString("ru-RU").replace(/,/g, ' ');
+    }
+
+    // Обновляем рейтинг с данными из базы данных
+    updateRating();
+});
