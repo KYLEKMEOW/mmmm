@@ -473,48 +473,33 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const loadingContainer = document.querySelector('.loading-container');
-  const progressBar = document.getElementById('progressBar');
-
-  function simulateLoading() {
-    let progress = 0;
-    const interval = setInterval(function() {
-      progress += 100 / 10; // Прогресс увеличивается на 100 / 14 процентов каждую секунду
-      progressBar.style.width = `${progress}%`;
-
-      if (progress >= 100) {
-        clearInterval(interval);
-        // Скрытие фона после завершения имитации загрузки
-        loadingContainer.style.visibility = 'hidden';
-      }
-    }, 500);
-  }
-
-  simulateLoading();
-});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Уровни и их соответствующий опыт
     const levels = [
         { level: 1, exp: 0 },
         { level: 2, exp: 1000 },
-        { level: 3, exp: 5000 },
-        { level: 4, exp: 14000 }
+        { level: 3, exp: 4000 },
+        { level: 4, exp: 7000 },
+        { level: 5, exp: 14000 },
+        { level: 6, exp: 23000 },
+        { level: 7, exp: 34000 },
+        { level: 8, exp: 50000 },
+		{ level: 9, exp: 100000 },
     ];
 
     // Пример данных из базы данных (данные о золоте для каждого игрока)
     const playersFromDatabase = [
-        { name: "🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW", gold: 19885 },
-        { name: "💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe", gold: 12948 },
-        { name: "🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA", gold: 8595 },
-        { name: "💗☃️👗🪙👑🧑‍💻💘❄️Joline", gold: 995 },
-		{ name: "💗☃️👗🪙👑🧑‍💻💘❄️Pell", gold: 12 },
-		{ name: "❓🛡️💗☃️GameOON!", gold: 38775 },
-		{ name: "🦉💗☃️👗🪙✒️ⓂAmnistaria", gold: 0 },
-		{ name: "🦉ⓂShaSha", gold: 0 },
-		{ name: "️Kisylya", gold: 98445 },
-		{ name: "️MYrMeOW", gold: 119211 }
+        { name: "KYLEK_MEOW", gold: 19885 },
+        { name: "GoGoMeMe", gold: 12948 },
+        { name: "Hola COLA", gold: 8595 },
+        { name: "Joline", gold: 995 },
+        { name: "Pell", gold: 12 },
+        { name: "❓️GameOON!", gold: 38775 },
+        { name: "Amnistaria", gold: 0 },
+        { name: "ⓂShaSha", gold: 301111 },
+        { name: "️Kisylya", gold: 98445 },
+        { name: "️MYrMeOW", gold: 119211 }
     ];
 
     // Функция для обновления рейтинга с новыми данными
@@ -554,7 +539,16 @@ document.addEventListener("DOMContentLoaded", function() {
         levelsInfo.innerHTML = "";
         levels.forEach(level => {
             const levelElement = document.createElement("div");
-            levelElement.textContent = `Уровень ${level.level} - ${formatExp(level.exp)} exp`;
+            levelElement.classList.add("level-info");
+
+            const levelTitle = document.createElement("span");
+            levelTitle.textContent = `Уровень ${level.level} - ${formatExp(level.exp)} exp`;
+
+            const levelBonus = document.createElement("span");
+            levelBonus.textContent = getLevelBonus(level.level);
+
+            levelElement.appendChild(levelTitle);
+            levelElement.appendChild(levelBonus);
             levelsInfo.appendChild(levelElement);
         });
     }
@@ -580,13 +574,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 return `⭐ Уровень ${levels[i].level}`;
             }
         }
-        return `⭐ Уровень 1`; // Вернуть первый уровень, если опыта недостаточно для других уровней
+        return `⭐ Уровень 9`; // Вернуть первый уровень, если опыта недостаточно для других уровней
     }
 
     // Функция для расчета опыта на основе количества золота
     function getExp(gold) {
-        // Пример: считаем опыт как 10% от количества золота
-        return Math.floor(gold * 0.1); // Пример расчета опыта
+        // Пример: считаем опыт как 30% от количества золота
+        return Math.floor(gold * 0.3); // Пример расчета опыта
     }
 
     // Функция для форматирования опыта
@@ -597,6 +591,30 @@ document.addEventListener("DOMContentLoaded", function() {
     // Функция для форматирования золота
     function formatGold(gold) {
         return gold.toLocaleString("ru-RU").replace(/,/g, ' ');
+    }
+
+    // Функция для получения бонусов для каждого уровня
+    function getLevelBonus(level) {
+        switch (level) {
+            case 1:
+                return " - Базовый уровень";
+            case 2:
+                return " - Возможность учавстовать в ивентах";
+            case 3:
+                return " - Возможность создать свой клан";
+            case 4:
+                return " - Ежедневный бонус";
+            case 5:
+                return " - Уникальный предмет мебели - Топовец (+5 000 комфорта) ";
+            case 6:
+                return " - Скидка на покупки мебели в магазине";
+            case 7:
+                return " - Скидка на покупку золота в магазине";
+            case 8:
+                return " - х2 активность ";
+            default:
+                return " - Бонусов нет";
+        }
     }
 
     // Обновляем рейтинг с данными из базы данных
