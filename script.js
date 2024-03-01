@@ -112,6 +112,10 @@ function goToEventPage() {
 function goToRatPage() {
     window.location.href = 'rat.html'; // Замените 'purchase.html' на название вашего файла новой страницы
 }
+// Функция для перехода на другую страницу
+function goToCHPage() {
+    window.location.href = 'ch.html'; // Замените 'purchase.html' на название вашего файла новой страницы
+}
 
 
 // Функция для обновления прогресс бара и информации о лиге
@@ -486,6 +490,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { level: 7, exp: 34000 },
         { level: 8, exp: 50000 },
 		{ level: 9, exp: 100000 },
+		{ level: 10, exp: 200000 },
     ];
 
     // Пример данных из базы данных (данные о золоте для каждого игрока)
@@ -497,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { name: "Pell", gold: 12 },
         { name: "❓️GameOON!", gold: 38775 },
         { name: "Amnistaria", gold: 0 },
-        { name: "ⓂShaSha", gold: 301111 },
+        { name: "ⓂShaSha", gold: -100 },
         { name: "️Kisylya", gold: 98445 },
         { name: "️MYrMeOW", gold: 119211 }
     ];
@@ -555,7 +560,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Функция для определения титула в зависимости от количества золота
     function getTitle(gold) {
-        if (gold >= 200000) {
+	    if (gold >= 400000) {
+            return "Ультра-богач";
+        } else if (gold >= 200000) {
             return "Богатей";
         } else if (gold >= 50000) {
             return "Не бедняк";
@@ -612,6 +619,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 return " - Скидка на покупку золота в магазине";
             case 8:
                 return " - х2 активность ";
+			case 9:
+                return " - Улучшеный ежедневный бонус (х2 награды) ";
+			case 10:
+                return " - Уникальная мебель в магазине";
+			case 11:
+                return " - Скидка на покупку золотых монет";				
             default:
                 return " - Бонусов нет";
         }
