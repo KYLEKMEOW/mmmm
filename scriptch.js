@@ -1,22 +1,22 @@
 // Пример данных активности игроков
 const players = [
-  { name: '🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', activity: 17855 },
-  { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', activity: 9686 },
-  { name: '🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', activity: 6646 },
-  { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', activity: 1235 },
-  { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', activity: 8558 },
-  { name: '❓🛡️💗☃️GameOON!', activity: 3441 },
-  { name: '🦉💗☃️👗🪙✒️ⓂAmnistaria', activity: 5948 },
-  { name: '🦉ⓂShaSha', activity: 12684 },
-  { name: '️Kisylya', activity: 11825 },
-  { name: '️MYrMeOW', activity: 9754 },
+  { name: '🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️KYLEK_MEOW', activity: 3994555 },
+  { name: '💗☃️👗🪙👑🧑‍💻💘❄️GoGoMeMe', activity: 150944 },
+  { name: '🛡️💗☃️🫂👗🪙👑🧑‍💻💘❄️Hola COLA', activity: 112033 },
+  { name: '💗☃️👗🪙👑🧑‍💻💘❄️Joline', activity: 122411 },
+  { name: '💗☃️👗🪙👑🧑‍💻💘❄️Pell', activity: 59445 },
+  { name: '❓🛡️💗☃️GameOON!', activity: 2094444 },
+  { name: '🦉💗☃️👗🪙✒️ⓂAmnistaria', activity: 20112 },
+  { name: '🦉ⓂShaSha', activity: 14951 },
+  { name: '️Kisylya', activity: 5988411 },
+  { name: '️MYrMeOW', activity: 7884775 },
 ];
 
 // Определение наград и целей для каждого сундука
 const chestsData = [
   { reward: 'Награда: 🪙150 золота ⚡100 вкладов вашему клубу', goal: 10000000 },
-  { reward: 'Награда: 🪙180 золота ⚡190 вкладов вашему клубу 🏳️Ивент "Х2 активность" на сутки', goal: 50000000 },
-  { reward: 'Награда: 🏳️Ивент "Х2 активность" на неделю 🏳️Ивент "Х2 золото" на неделю 🪙500 золота ⚡211 вкладов вашему клубу', goal: 350000000 }
+  { reward: 'Награда: 🪙180 золота ⚡190 вкладов вашему клубу 🏳️Ивент "Х2 активность" на сутки', goal: 20000000 },
+  { reward: 'Награда: 🏳️Ивент "Х2 активность" на неделю 🏳️Ивент "Х2 золото" на неделю 🪙500 золота ⚡211 вкладов вашему клубу', goal: 50000000 }
 
 ];
 

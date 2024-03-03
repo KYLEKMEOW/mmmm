@@ -491,20 +491,21 @@ document.addEventListener("DOMContentLoaded", function() {
         { level: 8, exp: 50000 },
 		{ level: 9, exp: 100000 },
 		{ level: 10, exp: 200000 },
+		{ level: 11, exp: 400000 },
     ];
 
     // Пример данных из базы данных (данные о золоте для каждого игрока)
     const playersFromDatabase = [
-        { name: "KYLEK_MEOW", gold: 19885 },
-        { name: "GoGoMeMe", gold: 12948 },
-        { name: "Hola COLA", gold: 8595 },
-        { name: "Joline", gold: 995 },
-        { name: "Pell", gold: 12 },
-        { name: "❓️GameOON!", gold: 38775 },
+        { name: "KYLEK_MEOW", gold: 209455 },
+        { name: "GoGoMeMe", gold: 49565 },
+        { name: "Hola COLA", gold: 17595 },
+        { name: "Joline", gold: 39453 },
+        { name: "Pell", gold: 194 },
+        { name: "❓️GameOON!", gold: 301944 },
         { name: "Amnistaria", gold: 0 },
-        { name: "ⓂShaSha", gold: -100 },
-        { name: "️Kisylya", gold: 98445 },
-        { name: "️MYrMeOW", gold: 119211 }
+        { name: "ⓂShaSha", gold: 0 },
+        { name: "️Kisylya", gold: 598441 },
+        { name: "️MYrMeOW", gold: 100045 }
     ];
 
     // Функция для обновления рейтинга с новыми данными
@@ -581,7 +582,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return `⭐ Уровень ${levels[i].level}`;
             }
         }
-        return `⭐ Уровень 9`; // Вернуть первый уровень, если опыта недостаточно для других уровней
+        return `⭐ Уровень 1`; // Вернуть первый уровень, если опыта недостаточно для других уровней
     }
 
     // Функция для расчета опыта на основе количества золота

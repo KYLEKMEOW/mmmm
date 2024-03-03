@@ -37,24 +37,9 @@
 <body>
   <div id="message-container"></div>
 
-</body>
-<!-- -->
-<body>
     <header>
-        <body>
-
-    <!-- Ваш контент здесь -->
-
-    <!-- Гирлянда -->
-  <!--   <div class="garland">
-        <p>Данные в ТОПе обновились, заходи забирать награды!</p>
-        <button class="go-to-page-button" onclick="goToRatPage()">Топ-14 февраля!</button>
-    </div> -->
-
-</body>
-
         <h1>MEOW - ПЕРЕРОЖДЕНИЕ</h1>
-        <h4>v19.5.19</h4>
+        <h4>v19.6.30</h4>
 
             <button class="go-to-page-button" onclick="goToPurchasePage()">Перейти в магазин</button>
             <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
@@ -62,8 +47,6 @@
             <button class="go-to-page-button" onclick="goToCHPage()">Сундуки активности</button>
 
 </div>
-<body>
-
 <p>На сайте сейчас: <span id="onlineUsers"></span></p>
 
 <script>
@@ -86,8 +69,6 @@
     updateOnlineUsers();
 </script>
 
-</body>
-
     </header>
     
 
@@ -108,42 +89,33 @@
                 <p> <p>
                 <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
             </div>
-<!--              <div class="boost-card">
-                <h2>АКТУАЛЬНЫЕ БУСТЫ:</h2>
-                <p><big> 🤸х8 Активность🤸<br>💰х2 Золото💰</big></p>  
-            </div>  -->
-       <!--     <div class="error-card">
-                <h2>Взлом рейтинга.</h2>
-                <p>Из-за взлома ТОПа по комфорту нам пришлось ввести ограничения по рейтингу в виде макисмального предела комфорта, ведь так мы сможем обезопасить себя от будущих проблем. Сейчас мы решаем проблему с читером, подымем предел, чтобы было видно сколько точно комфорта у лучшего игрока.</p>
-                <button class="event-button">Забрать</button>  
-            </div>  -->
 
                 <div class="leage-card">
-                <h2>Тебе подарок за успешное окончание ТОПа клубов!</h2>
-                <p>Твоя награда: х99 золота</p>
+                <h2>Тебе подарок за первый сундук в "Сундуки Активности"</h2>
+                <p>Твоя награда: х150 золота, х100 вкладов клубу</p>
             <button class="N-button">Забрать</button>
             </div> 
 
-             <div class="leage-card">
-                <h2>Блог гейм-дизайнера:</h2>
-                <p>Я теперь там!</p>
-                <button class="go-to-page-button" onclick="goToEventPage()">Mnews</button> 
+              <div class="leage-card">
+                <h2>Опрос "Убираем лиги?"</h2>
+                <p> </p>
+                <button class="event-button">Убираем</button>
+                <button class="event-button">Оставляем</button>
                   <img src="img/логоклб.png" alt="Скинка копилка">
        
-        </div>
-
+        </div> 
             <div class="news-card">
                 <h2>Клубная битва: 2.0</h2>
                 <p>Анонс уже на нашем ютуб канале, переходим и смотрим!</p>
             <button class="event-button">Смотреть</button>
             </div>
 
-             <div class="buy-card">
+<!--              <div class="buy-card">
                 <h2> </h2>
                 <p> </p>
                 <div id="special-offer-timer">00:00:00</div>
         <button class="buy-button" onclick="buySpecialOffer('   ', 0, 0, 0)">Купить</button>
-        </div>
+        </div> -->
             </div>
         </div>
     </div>
@@ -156,15 +128,15 @@
                  <div class="buy-card">
                 <h2>Клубные уровни:</h2>
                 <p>В данный момент клубных уровней 7. <br>1 уровень: от 1 до 5000 вкладов<br>2 уровень: от 5001 до 15000 вкладов<br>3 уровень: от 15001 до 35000<br>4 уровень: от 35001 до 50000<br>5 уровень: от 50001 до 70000<br>6 уровень: от 70001 до 110.000<br>7 уровень: от 110.001<br>-------------------------------------<br>Покупай улучшения для своего клуба снизу на кнопках!</p>
-				<button id="upgradeBtn1" class="upgrade-button" onclick="buyUpgrade(1)">Улучшение "-1% на покупку золота" [1 000 вложений]</button>
-				<button id="upgradeBtn2" class="upgrade-button" onclick="buyUpgrade(2)">Улучшение "-5% на покупку золота" [11 000 вложений]</button>
-				<button id="upgradeBtn3" class="upgrade-button" onclick="buyUpgrade(3)">Улучшение "-1% на покупку мебели за золото" [15 000 вложений]</button>
-				<button id="upgradeBtn4" class="upgrade-button" onclick="buyUpgrade(4)">Улучшение "-3% на покупку мебели за золото" [35 000 вложений]</button>
-				<button id="upgradeBtn5" class="upgrade-button" onclick="buyUpgrade(5)">Улучшение "-7% на покупку золота" [100 000 вложений]</button>
-				<button id="upgradeBtn6" class="upgrade-button" onclick="buyUpgrade(7)">Улучшение "+1 место в клубе" [22 000 вложений]</button>
-				<button id="upgradeBtn7" class="upgrade-button" onclick="buyUpgrade(8)">Улучшение "+1 место в клубе" [66 666 вложений]</button>
-				<button id="upgradeBtn8" class="upgrade-button" onclick="buyUpgrade(9)">Улучшение "-4% на покупку мебели" [122 222 вложений]</button>
-				<button id="upgradeBtn8" class="upgrade-button" onclick="buyUpgrade(9)">Мебель "Р-92" [79.999 вложений]</button>
+                <button id="upgradeBtn1" class="upgrade-button" onclick="buyUpgrade(1)">Улучшение "-1% на покупку золота" [1 000 вложений]</button>
+                <button id="upgradeBtn2" class="upgrade-button" onclick="buyUpgrade(2)">Улучшение "-5% на покупку золота" [11 000 вложений]</button>
+                <button id="upgradeBtn3" class="upgrade-button" onclick="buyUpgrade(3)">Улучшение "-1% на покупку мебели за золото" [15 000 вложений]</button>
+                <button id="upgradeBtn4" class="upgrade-button" onclick="buyUpgrade(4)">Улучшение "-3% на покупку мебели за золото" [35 000 вложений]</button>
+                <button id="upgradeBtn5" class="upgrade-button" onclick="buyUpgrade(5)">Улучшение "-7% на покупку золота" [100 000 вложений]</button>
+                <button id="upgradeBtn6" class="upgrade-button" onclick="buyUpgrade(6)">Улучшение "+1 место в клубе" [22 000 вложений]</button>
+                <button id="upgradeBtn7" class="upgrade-button" onclick="buyUpgrade(7)">Улучшение "+1 место в клубе" [66 666 вложений]</button>
+                <button id="upgradeBtn8" class="upgrade-button" onclick="buyUpgrade(8)">Улучшение "-4% на покупку мебели" [122 222 вложений]</button>
+                <button id="upgradeBtn9" class="upgrade-button" onclick="buyUpgrade(9)">Мебель "Р-92" [79.999 вложений]</button>
 
             </div>
 
@@ -195,8 +167,6 @@
 
 
 <div class="leage-card">
- <body>
-
   <div id="progress-info">
     <div id="progress-bar-container">
       <div id="progress-bar"></div>
@@ -209,9 +179,8 @@
       <button class="leage-button">Забрать награду за лигу</button>
     </div>
   </div>
-</body>
-
+</div>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
